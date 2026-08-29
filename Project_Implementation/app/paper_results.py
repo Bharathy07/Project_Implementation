@@ -40,7 +40,7 @@ FIGURE_FILES = [
     ("Precision-Recall Curve", "precision_recall_curve.png"), ("Calibration Curve", "calibration_curve.png"), ("Feature Importance", "feature_importance.png"),
     ("SHAP Summary", "shap_summary.png"), ("SHAP Bar", "shap_bar.png"), ("Five-Profile Prediction", "five_patient_prediction.png"),
     ("Five-Profile Counterfactual", "five_patient_counterfactual_probability.png"), ("Feature Changes", "five_patient_feature_changes.png"),
-    ("Pareto Front", "five_patient_pareto_fronts.png"), ("DiCE vs CC-MO-CF", "five_patient_dice_vs_ccmocf.png"), ("Ablation Study", "ablation_comparison.png"),
+    ("Pareto Front", "five_patient_pareto_fronts.png"), ("DiCE vs CC-MO-CF", "five_patient_dice_vs_ccmocf.png"),
 ]
 
 
@@ -147,7 +147,16 @@ def main():
     st.header("9. Five Individual Profiles"); st.dataframe(five,use_container_width=True)
     st.header("10–13. Five-Profile and Pareto Visualizations"); show_images(st,["five_patient_prediction.png","five_patient_counterfactual_probability.png","five_patient_feature_changes.png","five_patient_pareto_fronts.png"]); st.caption("The Pareto plot is a 2D projection of the higher-dimensional objective space.")
     st.header("14. Clinical Constraints"); st.dataframe(constraints(),use_container_width=True)
-    st.header("15. Ablation Study"); st.dataframe(read_csv(TABLES/"ablation_results.csv"),use_container_width=True); show_images(st,["ablation_comparison.png"])
+    st.header("15. Ablation Study")
+    ablation = read_csv(TABLES / "ablation_results.csv")
+    st.dataframe(ablation, use_container_width=True)
+    ablation_figure = FIGURES / "ablation_comparison.png"
+    if ablation_figure.exists():
+        st.image(str(ablation_figure), caption="Ablation comparison")
+    elif not ablation.empty and "Status" in ablation.columns:
+        st.info("No ablation figure is shown because this experiment is recorded as not implemented.")
+    else:
+        st.info("No ablation results are available.")
     st.header("16. Final Paper Tables")
     for label,name in TABLE_FILES.items():
         frame=dataset_stats() if name=="dataset_statistics.csv" else read_csv(TABLES/name); st.subheader(label); st.dataframe(frame,use_container_width=True); st.download_button(f"Download {name}",frame.to_csv(index=False),name,"text/csv",key=name)
