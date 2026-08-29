@@ -6,11 +6,16 @@ from __future__ import annotations
 
 import html
 import platform
-import sys
+from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
+from typing import Any, cast
 
 import pandas as pd
-import yaml
+
+try:
+    import yaml
+except ModuleNotFoundError:
+    yaml = None
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
@@ -54,11 +59,30 @@ def dataset_stats() -> pd.DataFrame:
 
 
 def constraints() -> pd.DataFrame:
-    with open(ROOT / "config" / "clinical_constraints.yaml", encoding="utf-8") as f: raw = yaml.safe_load(f) or {}
-    rows=[]
-    for feature, spec in raw.get("feature", {}).items():
+    if yaml is None:
+        return pd.DataFrame({"Status": ["Clinical constraints are unavailable because PyYAML is not installed on this host."]})
+    with open(ROOT / "config" / "clinical_constraints.yaml", encoding="utf-8") as f:
+        loaded: Any = yaml.safe_load(f)
+    raw: dict[str, Any] = loaded if isinstance(loaded, dict) else {}
+    features_value = raw.get("feature")
+    if not isinstance(features_value, dict):
+        return pd.DataFrame()
+    features = cast(dict[str, Any], features_value)
+
+    rows = []
+    for feature, spec in features.items():
+        if not isinstance(spec, dict):
+            continue
         rows.append({"Feature":feature,"Constraint type":spec.get("type"),"Lower bound":spec.get("lower_bound"),"Upper bound":spec.get("upper_bound"),"Maximum change":spec.get("max_step"),"Actionability":spec.get("actionable"),"Dependency rule":spec.get("dependency"),"Validation status":spec.get("validation_status")})
     return pd.DataFrame(rows)
+
+
+def package_version(package: str) -> str:
+    """Report optional package versions without making them runtime requirements."""
+    try:
+        return version(package)
+    except PackageNotFoundError:
+        return "not installed"
 
 
 def _text_table(frame: pd.DataFrame) -> str:
@@ -86,14 +110,23 @@ def main():
     st.header("1. Experiment Overview")
     ds=dataset_stats(); splits={n:len(read_csv(RESULTS/"splits"/f"{n}_patient_ids.csv")) for n in ("train","validation","test")}; c1,c2,c3,c4=st.columns(4); c1.metric("Records",ds.loc[ds.Statistic.eq("Records"),"Value"].iloc[0] if not ds.empty else "N/A"); c2.metric("Train",splits["train"]); c3.metric("Validation",splits["validation"]); c4.metric("Test",splits["test"])
     st.write("Algorithms: XGBoost, LightGBM, Hybrid Ensemble, TreeSHAP, DiCE, CC-MO-CF, NSGA-II")
-    import numpy, pymoo
-    st.caption(f"Python {platform.python_version()} · NumPy {numpy.__version__} · pandas {pd.__version__} · pymoo {pymoo.__version__}")
+    st.caption(f"Python {platform.python_version()} · NumPy {package_version('numpy')} · pandas {pd.__version__} · pymoo {package_version('pymoo')}")
     st.header("2. Dataset Results"); st.dataframe(ds, use_container_width=True)
     st.header("3. Model Performance"); st.dataframe(metrics, use_container_width=True); show_images(st, ["accuracy_comparison.png","metrics_comparison.png","confusion_matrix.png","roc_curve.png","precision_recall_curve.png","calibration_curve.png","prediction_probability_distribution.png"])
     st.header("4. Feature Importance"); imp=read_csv(TABLES/"shap_feature_importance.csv"); st.dataframe(imp.head(15),use_container_width=True); show_images(st,["feature_importance.png"])
     st.header("5. TreeSHAP Explainability"); show_images(st,["shap_summary.png","shap_bar.png"]); patient=read_csv(FIGURES/"shap"/"patient_explanations.csv"); st.dataframe(patient,use_container_width=True)
     if not patient.empty:
-        pid=st.selectbox("PatientID",patient.PatientID.tolist()); row=patient[patient.PatientID.eq(pid)].iloc[0]; st.json(row.to_dict()); image=FIGURES/"shap"/f"waterfall_patient_{pid}.png"; st.image(str(image),caption="Positive SHAP values push prediction toward PMOS; negative values push it away. They are not causal effects.") if image.exists() else st.info("Individual waterfall plot not generated.")
+        pid = st.selectbox("PatientID", patient.PatientID.tolist())
+        row = patient[patient.PatientID.eq(pid)].iloc[0]
+        st.json(row.to_dict())
+        image = FIGURES / "shap" / f"waterfall_patient_{pid}.png"
+        if image.exists():
+            st.image(
+                str(image),
+                caption="Positive SHAP values push prediction toward PMOS; negative values push it away. They are not causal effects.",
+            )
+        else:
+            st.info("Individual waterfall plot not generated.")
     st.header("6. DiCE Counterfactual Baseline"); st.metric("DiCE counterfactuals",len(dice)); st.dataframe(dice,use_container_width=True)
     st.header("7. CC-MO-CF Results"); st.metric("Feasible CC-MO-CF counterfactuals",int(five.get("NumberOfCounterfactuals",pd.Series(dtype=float)).sum()) if not five.empty else 0); st.dataframe(five,use_container_width=True)
     st.header("8. DiCE vs CC-MO-CF"); st.dataframe(comparison,use_container_width=True); show_images(st,["five_patient_dice_vs_ccmocf.png"])
@@ -106,7 +139,12 @@ def main():
         frame=dataset_stats() if name=="dataset_statistics.csv" else read_csv(TABLES/name); st.subheader(label); st.dataframe(frame,use_container_width=True); st.download_button(f"Download {name}",frame.to_csv(index=False),name,"text/csv",key=name)
     st.header("17. Final Paper Figures")
     for label,name in FIGURE_FILES:
-        st.subheader(label); path=FIGURES/name; st.image(str(path)) if path.exists() else st.info("Figure not generated")
+        st.subheader(label)
+        path = FIGURES / name
+        if path.exists():
+            st.image(str(path))
+        else:
+            st.info("Figure not generated")
     st.header("18. Paper-Ready Results Summary")
     final=metrics[metrics.Model.eq("Hybrid Ensemble")].iloc[0] if not metrics.empty else pd.Series(dtype=object); st.write({k:final.get(k,"N/A") for k in ["Model","Accuracy","Precision","Recall","F1-score","ROC-AUC","MCC","Balanced Accuracy"]}); st.write({"Profiles analyzed":len(five),"Feasible CC-MO-CF":int(five.get("NumberOfCounterfactuals",pd.Series(dtype=float)).sum()) if not five.empty else 0})
     md,hp=export_results(); st.header("19. Export"); st.download_button("Download final_paper_results.md",md.read_text(encoding="utf-8"),"final_paper_results.md"); st.download_button("Download final_paper_results.html",hp.read_text(encoding="utf-8"),"final_paper_results.html")

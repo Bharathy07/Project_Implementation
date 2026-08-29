@@ -1,0 +1,14 @@
+[server]
+# Streamlit Community Cloud supplies the port and host at runtime.
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f7fb"
+textColor = "#1b2638"
+font = "sans serif"

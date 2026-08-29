@@ -1,0 +1,2 @@
+# Streamlit Community Cloud resolves dependencies from the Git repository root.
+-r Project_Implementation/requirements.txt
