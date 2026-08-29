@@ -1,0 +1,288 @@
+feature:
+  PatientID:
+    type: immutable
+    immutable: true
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: 0
+    allowed_direction: null
+    dependency: null
+    source: patient_identifier
+    validation_status: VALIDATED
+
+  Age (yrs):
+    type: immutable
+    immutable: true
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: 0
+    allowed_direction: null
+    dependency: null
+    source: clinical_record
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Weight (Kg):
+    type: actionable
+    immutable: false
+    actionable: true
+    lower_bound: 30.0
+    upper_bound: 200.0
+    max_step: 10.0
+    allowed_direction: both
+    dependency: null
+    source: clinical_record
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  BMI:
+    type: derived
+    immutable: false
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: null
+    allowed_direction: null
+    dependency: Weight (Kg), Height(Cm)
+    source: derived_from_weight_and_height
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Cycle length(days):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: 10.0
+    upper_bound: 180.0
+    max_step: 5.0
+    allowed_direction: null
+    dependency: null
+    source: clinical_record
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  FSH(mIU/mL):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: null
+    allowed_direction: null
+    dependency: null
+    source: laboratory_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  LH(mIU/mL):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: null
+    allowed_direction: null
+    dependency: null
+    source: laboratory_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  AMH(ng/mL):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: null
+    allowed_direction: null
+    dependency: null
+    source: laboratory_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  FSH/LH:
+    type: derived
+    immutable: false
+    actionable: false
+    lower_bound: null
+    upper_bound: null
+    max_step: null
+    allowed_direction: null
+    dependency: FSH(mIU/mL), LH(mIU/mL)
+    source: derived_from_laboratory_values
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Follicle No. (L):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 30.0
+    max_step: 2.0
+    allowed_direction: null
+    dependency: null
+    source: ultrasound_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Follicle No. (R):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 30.0
+    max_step: 2.0
+    allowed_direction: null
+    dependency: null
+    source: ultrasound_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Avg. F size (L) (mm):
+    type: non_actionable_measurement
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 40.0
+    max_step: 2.0
+    allowed_direction: null
+    dependency: null
+    source: ultrasound_measurement
+    validation_status: REQUIRES_CLINICAL_VALIDATION
+
+  Cycle(R/I)_2:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_categorical
+    validation_status: VALIDATED
+
+  Cycle(R/I)_4:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_categorical
+    validation_status: VALIDATED
+
+  Weight gain(Y/N)_0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Weight gain(Y/N)_1:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  hair growth(Y/N)_0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  hair growth(Y/N)_1:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Skin darkening (Y/N)_0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Skin darkening (Y/N)_1:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Pimples(Y/N)_0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Pimples(Y/N)_1:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Fast food (Y/N)_0.0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED
+
+  Fast food (Y/N)_1.0:
+    type: binary
+    immutable: false
+    actionable: false
+    lower_bound: 0.0
+    upper_bound: 1.0
+    max_step: 1.0
+    allowed_direction: both
+    dependency: null
+    source: encoded_binary
+    validation_status: VALIDATED

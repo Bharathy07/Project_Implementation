@@ -1,0 +1,3 @@
+Method,Validity,Proximity,Sparsity,Plausibility,Diversity,Constraint Satisfaction,Dependency Consistency,Runtime
+DiCE,1.0,,4.733333333333333,,,,,
+CC-MO-CF,0.0,,,,,0.0,,

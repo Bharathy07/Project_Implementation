@@ -1,0 +1,3 @@
+PatientID,ActualLabel,PredictedLabel,PCOSProbability,TopContributingFeatures,ContributionDirection,ContributionMagnitude
+248,1,1,0.9951229691505432,Follicle No. (R) | hair growth(Y/N)_0 | Weight gain(Y/N)_0 | Follicle No. (L) | Skin darkening (Y/N)_0,positive | positive | positive | positive | positive,1.1798 | 0.4053 | 0.3829 | 0.3766 | 0.2783
+451,1,1,0.9925282001495361,Follicle No. (R) | Follicle No. (L) | hair growth(Y/N)_0 | Weight gain(Y/N)_0 | Avg. F size (L) (mm),positive | positive | positive | positive | positive,1.4275 | 0.5490 | 0.3056 | 0.2867 | 0.2162

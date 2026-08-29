@@ -1,0 +1,21 @@
+{
+  "xgboost": {
+    "verbosity": 0,
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "eta": 0.12804885031289487,
+    "max_depth": 6,
+    "subsample": 0.6712579968688783,
+    "colsample_bytree": 0.9820137631174569,
+    "lambda": 0.14920481571355038,
+    "alpha": 0.033833489723769476
+  },
+  "lightgbm": {
+    "learning_rate": 0.052848540004792,
+    "num_leaves": 32,
+    "feature_fraction": 0.8986004546819083,
+    "bagging_fraction": 0.9340382434564317,
+    "reg_alpha": 2.066862516896691,
+    "reg_lambda": 2.401215180911734
+  }
+}

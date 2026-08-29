@@ -1,0 +1,3 @@
+PatientID,status,n_counterfactuals,target_class
+27,generated,2,1
+249,generated,2,1

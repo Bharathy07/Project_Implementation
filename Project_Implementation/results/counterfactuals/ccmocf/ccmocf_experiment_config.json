@@ -1,0 +1,21 @@
+{
+  "phase": 9,
+  "model_name": "xgboost",
+  "model_artifact": "E:\\IV IEEE RESEARCH\\project\\Project_Implementation\\results\\models\\xgboost_model.json",
+  "expected_feature_count": 20,
+  "actual_model_feature_count": 20,
+  "population_size": 8,
+  "generations": 3,
+  "crossover": "pymoo NSGA2 default SBX",
+  "mutation": "pymoo NSGA2 default PM",
+  "seed": 42,
+  "top_k": 2,
+  "number_of_objectives": 6,
+  "direction_policy": "predicted PCOS: 1->0; predicted non-PCOS: 0->1",
+  "test_set_only": true,
+  "models_retrained": false,
+  "optimizer_used": "NSGA-II",
+  "pymoo_version": "0.6.2",
+  "split_identifier": "E:\\IV IEEE RESEARCH\\project\\Project_Implementation\\results\\splits\\patientid_split_mapping.csv",
+  "execution_timestamp_utc": "2026-08-22T07:10:31.072362+00:00"
+}

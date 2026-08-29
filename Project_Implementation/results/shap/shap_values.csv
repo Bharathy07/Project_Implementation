@@ -1,0 +1,1641 @@
+PatientID,Feature,FeatureValue,SHAPValue,Direction
+20,Age (yrs),-0.33399029906448285,0.01135122,positive
+20,Weight (Kg),2.4420851195322015,-0.032639552,negative
+20,BMI,1.8145741604663996,0.08707424,positive
+20,Cycle length(days),1.529396303372705,0.012176277,positive
+20,FSH(mIU/mL),-1.4419920260111363,0.16104285,positive
+20,Follicle No. (L),2.4969057479323813,0.59494525,positive
+20,Follicle No. (R),0.3567826035222319,0.60685384,positive
+20,Avg. F size (L) (mm),0.9209078145971672,0.11169083,positive
+20,Cycle(R/I)_2,0.0,0.33597723,positive
+20,Cycle(R/I)_4,1.0,0.0044343187,positive
+20,Weight gain(Y/N)_0,1.0,-0.28977633,negative
+20,Weight gain(Y/N)_1,0.0,-0.03749376,negative
+20,hair growth(Y/N)_0,0.0,0.47901604,positive
+20,hair growth(Y/N)_1,1.0,0.0,positive
+20,Skin darkening (Y/N)_0,0.0,0.2231785,positive
+20,Skin darkening (Y/N)_1,1.0,0.031734277,positive
+20,Pimples(Y/N)_0,0.0,0.14300518,positive
+20,Pimples(Y/N)_1,1.0,0.0,positive
+20,Fast food (Y/N)_0.0,0.0,0.098317474,positive
+20,Fast food (Y/N)_1.0,1.0,0.0,positive
+27,Age (yrs),-0.33399029906448285,0.011826476,positive
+27,Weight (Kg),1.5770514596776222,-0.09734815,negative
+27,BMI,1.4147751680729135,0.056656603,positive
+27,Cycle length(days),-1.4195518841139434,0.05210008,positive
+27,FSH(mIU/mL),0.6311920193023196,-0.056216672,negative
+27,Follicle No. (L),2.4969057479323813,0.4609925,positive
+27,Follicle No. (R),3.0630800777310006,1.1251131,positive
+27,Avg. F size (L) (mm),-1.2017463522937548,-0.039037287,negative
+27,Cycle(R/I)_2,0.0,0.291295,positive
+27,Cycle(R/I)_4,1.0,0.0060285665,positive
+27,Weight gain(Y/N)_0,0.0,0.40343174,positive
+27,Weight gain(Y/N)_1,1.0,0.100522384,positive
+27,hair growth(Y/N)_0,0.0,0.40256292,positive
+27,hair growth(Y/N)_1,1.0,0.0,positive
+27,Skin darkening (Y/N)_0,0.0,0.2943522,positive
+27,Skin darkening (Y/N)_1,1.0,0.04135549,positive
+27,Pimples(Y/N)_0,0.0,0.140502,positive
+27,Pimples(Y/N)_1,1.0,0.0,positive
+27,Fast food (Y/N)_0.0,0.0,0.085489795,positive
+27,Fast food (Y/N)_1.0,1.0,0.0,positive
+32,Age (yrs),0.44301815149173635,-0.0416742,negative
+32,Weight (Kg),-0.24913071112649013,-0.017153246,negative
+32,BMI,0.2798247412846489,0.009850644,positive
+32,Cycle length(days),-0.6823148372422814,0.07240634,positive
+32,FSH(mIU/mL),0.06577818876228622,-0.032339476,negative
+32,Follicle No. (L),-0.22806383209461129,-0.21882689,negative
+32,Follicle No. (R),0.8078321825570267,1.3188138,positive
+32,Avg. F size (L) (mm),-0.2920374236262168,-0.08662214,negative
+32,Cycle(R/I)_2,1.0,-0.17782763,negative
+32,Cycle(R/I)_4,0.0,-0.0021235212,negative
+32,Weight gain(Y/N)_0,0.0,0.36941496,positive
+32,Weight gain(Y/N)_1,1.0,0.092771366,positive
+32,hair growth(Y/N)_0,0.0,0.85062224,positive
+32,hair growth(Y/N)_1,1.0,0.0,positive
+32,Skin darkening (Y/N)_0,0.0,0.32293233,positive
+32,Skin darkening (Y/N)_1,1.0,0.11037868,positive
+32,Pimples(Y/N)_0,0.0,0.18849629,positive
+32,Pimples(Y/N)_1,1.0,0.0,positive
+32,Fast food (Y/N)_0.0,0.0,0.1104873,positive
+32,Fast food (Y/N)_1.0,1.0,0.0,positive
+35,Age (yrs),-0.7224945243425924,0.21396056,positive
+35,Weight (Kg),-0.921934668791163,0.106134914,positive
+35,BMI,-1.1028359823222875,-0.15735072,negative
+35,Cycle length(days),0.05492220962938073,-0.021833962,negative
+35,FSH(mIU/mL),-1.306679314428906,0.1953105,positive
+35,Follicle No. (L),1.2582832115564755,0.8218149,positive
+35,Follicle No. (R),0.13125781400483452,-0.22327776,negative
+35,Avg. F size (L) (mm),-0.2920374236262168,-0.13548349,negative
+35,Cycle(R/I)_2,1.0,-0.17546456,negative
+35,Cycle(R/I)_4,0.0,-0.0015494553,negative
+35,Weight gain(Y/N)_0,1.0,-0.16968487,negative
+35,Weight gain(Y/N)_1,0.0,-0.08697494,negative
+35,hair growth(Y/N)_0,1.0,-0.22724232,negative
+35,hair growth(Y/N)_1,0.0,0.0,positive
+35,Skin darkening (Y/N)_0,1.0,-0.15261175,negative
+35,Skin darkening (Y/N)_1,0.0,-0.01626655,negative
+35,Pimples(Y/N)_0,1.0,-0.286155,negative
+35,Pimples(Y/N)_1,0.0,0.0,positive
+35,Fast food (Y/N)_0.0,1.0,-0.11972848,negative
+35,Fast food (Y/N)_1.0,0.0,0.0,positive
+44,Age (yrs),-1.4995029748988116,0.042348616,positive
+44,Weight (Kg),0.808132650917996,-0.094547436,negative
+44,BMI,0.1869546890946123,0.005291856,positive
+44,Cycle length(days),0.05492220962938073,-0.030027838,negative
+44,FSH(mIU/mL),-1.0070583102111104,0.07521818,positive
+44,Follicle No. (L),0.01966067518056986,-0.082699366,negative
+44,Follicle No. (R),0.3567826035222319,0.036744256,positive
+44,Avg. F size (L) (mm),-2.1114552809612928,-0.19807334,negative
+44,Cycle(R/I)_2,1.0,-0.27825356,negative
+44,Cycle(R/I)_4,0.0,-0.0015494553,negative
+44,Weight gain(Y/N)_0,1.0,-0.31253383,negative
+44,Weight gain(Y/N)_1,0.0,-0.08832493,negative
+44,hair growth(Y/N)_0,1.0,-0.42120615,negative
+44,hair growth(Y/N)_1,0.0,0.0,positive
+44,Skin darkening (Y/N)_0,1.0,-0.2515839,negative
+44,Skin darkening (Y/N)_1,0.0,-0.035219926,negative
+44,Pimples(Y/N)_0,1.0,-0.25452557,negative
+44,Pimples(Y/N)_1,0.0,0.0,positive
+44,Fast food (Y/N)_0.0,1.0,-0.25170755,negative
+44,Fast food (Y/N)_1.0,0.0,0.0,positive
+48,Age (yrs),-1.110998749620702,0.048285294,positive
+48,Weight (Kg),-1.883083179740696,0.16822614,positive
+48,BMI,-2.0391959244645377,-0.11841081,negative
+48,Cycle length(days),0.05492220962938073,-0.036984794,negative
+48,FSH(mIU/mL),1.1917732530001306,-0.052339137,negative
+48,Follicle No. (L),-0.22806383209461129,-0.24088703,negative
+48,Follicle No. (R),0.13125781400483452,-0.63984644,negative
+48,Avg. F size (L) (mm),0.01119888592962917,0.025159333,positive
+48,Cycle(R/I)_2,1.0,-0.26002067,negative
+48,Cycle(R/I)_4,0.0,-0.0022248416,negative
+48,Weight gain(Y/N)_0,1.0,-0.108044095,negative
+48,Weight gain(Y/N)_1,0.0,-0.066862114,negative
+48,hair growth(Y/N)_0,1.0,-0.27217275,negative
+48,hair growth(Y/N)_1,0.0,0.0,positive
+48,Skin darkening (Y/N)_0,1.0,-0.116665736,negative
+48,Skin darkening (Y/N)_1,0.0,-0.033062547,negative
+48,Pimples(Y/N)_0,1.0,-0.19296926,negative
+48,Pimples(Y/N)_1,0.0,0.0,positive
+48,Fast food (Y/N)_0.0,1.0,-0.111903906,negative
+48,Fast food (Y/N)_1.0,0.0,0.0,positive
+50,Age (yrs),-0.9167466369816473,0.08486001,positive
+50,Weight (Kg),-0.8258198176962098,0.023787677,positive
+50,BMI,-0.7182010373315351,-0.09098746,negative
+50,Cycle length(days),-1.4195518841139434,0.05455979,positive
+50,FSH(mIU/mL),-1.2631859428489034,0.115215324,positive
+50,Follicle No. (L),-0.22806383209461129,-0.2284358,negative
+50,Follicle No. (R),0.3567826035222319,0.8009983,positive
+50,Avg. F size (L) (mm),-0.2920374236262168,-0.06648263,negative
+50,Cycle(R/I)_2,0.0,0.37381107,positive
+50,Cycle(R/I)_4,1.0,0.01341166,positive
+50,Weight gain(Y/N)_0,0.0,0.34217936,positive
+50,Weight gain(Y/N)_1,1.0,0.015444759,positive
+50,hair growth(Y/N)_0,0.0,0.70886517,positive
+50,hair growth(Y/N)_1,1.0,0.0,positive
+50,Skin darkening (Y/N)_0,0.0,0.28586835,positive
+50,Skin darkening (Y/N)_1,1.0,0.07949654,positive
+50,Pimples(Y/N)_0,0.0,0.12598741,positive
+50,Pimples(Y/N)_1,1.0,0.0,positive
+50,Fast food (Y/N)_0.0,0.0,0.11615593,positive
+50,Fast food (Y/N)_1.0,1.0,0.0,positive
+51,Age (yrs),-1.6937550875378664,0.049893267,positive
+51,Weight (Kg),0.808132650917996,-0.12955177,negative
+51,BMI,-0.3321846203924136,-0.013481195,negative
+51,Cycle length(days),3.3429994386770203,-0.08824948,negative
+51,FSH(mIU/mL),-0.21934502492884167,-0.0326795,negative
+51,Follicle No. (L),2.4969057479323813,0.54762614,positive
+51,Follicle No. (R),2.612030498696206,1.1694229,positive
+51,Avg. F size (L) (mm),-0.8985100427379088,-0.06626781,negative
+51,Cycle(R/I)_2,0.0,0.25925875,positive
+51,Cycle(R/I)_4,1.0,0.0060285665,positive
+51,Weight gain(Y/N)_0,0.0,0.3608429,positive
+51,Weight gain(Y/N)_1,1.0,0.06786853,positive
+51,hair growth(Y/N)_0,0.0,0.4383644,positive
+51,hair growth(Y/N)_1,1.0,0.0,positive
+51,Skin darkening (Y/N)_0,0.0,0.3093388,positive
+51,Skin darkening (Y/N)_1,1.0,0.046944804,positive
+51,Pimples(Y/N)_0,0.0,0.09683097,positive
+51,Pimples(Y/N)_1,1.0,0.0,positive
+51,Fast food (Y/N)_0.0,1.0,-0.19909686,negative
+51,Fast food (Y/N)_1.0,0.0,0.0,positive
+52,Age (yrs),-1.6937550875378664,0.036011457,positive
+52,Weight (Kg),-0.53747526441135,0.15164979,positive
+52,BMI,-0.6851810051966672,-0.013267698,negative
+52,Cycle length(days),0.05492220962938073,-0.026097847,negative
+52,FSH(mIU/mL),0.2155886908711842,0.008678021,positive
+52,Follicle No. (L),0.267385182455751,-0.07580516,negative
+52,Follicle No. (R),0.8078321825570267,0.74038255,positive
+52,Avg. F size (L) (mm),0.01119888592962917,0.1689598,positive
+52,Cycle(R/I)_2,1.0,-0.28381848,negative
+52,Cycle(R/I)_4,0.0,-0.0015494553,negative
+52,Weight gain(Y/N)_0,1.0,-0.24855898,negative
+52,Weight gain(Y/N)_1,0.0,-0.08803872,negative
+52,hair growth(Y/N)_0,1.0,-0.36045665,negative
+52,hair growth(Y/N)_1,0.0,0.0,positive
+52,Skin darkening (Y/N)_0,1.0,-0.12362377,negative
+52,Skin darkening (Y/N)_1,0.0,-0.033062547,negative
+52,Pimples(Y/N)_0,1.0,-0.45213324,negative
+52,Pimples(Y/N)_1,0.0,0.0,positive
+52,Fast food (Y/N)_0.0,1.0,-0.24020377,negative
+52,Fast food (Y/N)_1.0,0.0,0.0,positive
+53,Age (yrs),-0.13973818642542804,-0.004176509,negative
+53,Weight (Kg),-0.921934668791163,0.049520884,positive
+53,BMI,-1.036118611539207,-0.1330148,negative
+53,Cycle length(days),-0.6823148372422814,0.16898468,positive
+53,FSH(mIU/mL),1.0661257351023454,-0.018446473,negative
+53,Follicle No. (L),0.01966067518056986,0.15191421,positive
+53,Follicle No. (R),1.033356972074424,1.6490716,positive
+53,Avg. F size (L) (mm),-0.8985100427379088,-0.1779488,negative
+53,Cycle(R/I)_2,1.0,-0.18457915,negative
+53,Cycle(R/I)_4,0.0,-0.0015494553,negative
+53,Weight gain(Y/N)_0,0.0,0.3867274,positive
+53,Weight gain(Y/N)_1,1.0,0.08470527,positive
+53,hair growth(Y/N)_0,1.0,-0.2668048,negative
+53,hair growth(Y/N)_1,0.0,0.0,positive
+53,Skin darkening (Y/N)_0,0.0,0.31846878,positive
+53,Skin darkening (Y/N)_1,1.0,0.13786633,positive
+53,Pimples(Y/N)_0,0.0,0.1499315,positive
+53,Pimples(Y/N)_1,1.0,0.0,positive
+53,Fast food (Y/N)_0.0,0.0,0.058361463,positive
+53,Fast food (Y/N)_1.0,1.0,0.0,positive
+57,Age (yrs),1.2200266020479555,-0.09827886,negative
+57,Weight (Kg),-0.3452455622214434,-0.0467646,negative
+57,BMI,-0.6216191383653621,-0.067431495,negative
+57,Cycle length(days),0.05492220962938073,-0.022848453,negative
+57,FSH(mIU/mL),1.7475218898557192,-0.09270426,negative
+57,Follicle No. (L),0.01966067518056986,-0.032581042,negative
+57,Follicle No. (R),-0.31979176502996026,-0.6221768,negative
+57,Avg. F size (L) (mm),-1.2017463522937548,-0.114896104,negative
+57,Cycle(R/I)_2,1.0,-0.17383549,negative
+57,Cycle(R/I)_4,0.0,-0.0015494553,negative
+57,Weight gain(Y/N)_0,1.0,-0.24145937,negative
+57,Weight gain(Y/N)_1,0.0,-0.060196012,negative
+57,hair growth(Y/N)_0,1.0,-0.30999705,negative
+57,hair growth(Y/N)_1,0.0,0.0,positive
+57,Skin darkening (Y/N)_0,1.0,-0.129336,negative
+57,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+57,Pimples(Y/N)_0,1.0,-0.17503469,negative
+57,Pimples(Y/N)_1,0.0,0.0,positive
+57,Fast food (Y/N)_0.0,1.0,-0.0761237,negative
+57,Fast food (Y/N)_1.0,0.0,0.0,positive
+74,Age (yrs),-1.110998749620702,0.018667394,positive
+74,Weight (Kg),1.0003623531079024,-0.0897436,negative
+74,BMI,0.5439136607292824,-0.04674112,negative
+74,Cycle length(days),0.05492220962938073,-0.011325466,negative
+74,FSH(mIU/mL),1.177275462473463,-0.06714665,negative
+74,Follicle No. (L),-0.7235128466449735,-0.3729161,negative
+74,Follicle No. (R),-0.5453165545473576,-0.9898849,negative
+74,Avg. F size (L) (mm),-1.3533645070716778,-0.09457488,negative
+74,Cycle(R/I)_2,1.0,-0.179945,negative
+74,Cycle(R/I)_4,0.0,-0.00563082,negative
+74,Weight gain(Y/N)_0,0.0,0.21292919,positive
+74,Weight gain(Y/N)_1,1.0,0.06631695,positive
+74,hair growth(Y/N)_0,1.0,-0.2550248,negative
+74,hair growth(Y/N)_1,0.0,0.0,positive
+74,Skin darkening (Y/N)_0,1.0,-0.10790068,negative
+74,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+74,Pimples(Y/N)_0,1.0,-0.13967252,negative
+74,Pimples(Y/N)_1,0.0,0.0,positive
+74,Fast food (Y/N)_0.0,1.0,-0.06601192,negative
+74,Fast food (Y/N)_1.0,0.0,0.0,positive
+76,Age (yrs),0.831522376769846,-0.14228076,negative
+76,Weight (Kg),1.192592055297809,-0.1102258,negative
+76,BMI,1.589872792870054,0.15334076,positive
+76,Cycle length(days),-0.6823148372422814,0.035108507,positive
+76,FSH(mIU/mL),0.892152248782335,-0.11168976,negative
+76,Follicle No. (L),-1.466686368470517,-0.24099165,negative
+76,Follicle No. (R),-0.9963661335821524,-0.7480678,negative
+76,Avg. F size (L) (mm),-3.2303972632223643,-0.0901261,negative
+76,Cycle(R/I)_2,1.0,-0.123138964,negative
+76,Cycle(R/I)_4,0.0,-0.00563082,negative
+76,Weight gain(Y/N)_0,1.0,-0.19522196,negative
+76,Weight gain(Y/N)_1,0.0,-0.049562067,negative
+76,hair growth(Y/N)_0,1.0,-0.17504866,negative
+76,hair growth(Y/N)_1,0.0,0.0,positive
+76,Skin darkening (Y/N)_0,1.0,-0.11768986,negative
+76,Skin darkening (Y/N)_1,0.0,-0.011925092,negative
+76,Pimples(Y/N)_0,1.0,-0.17407288,negative
+76,Pimples(Y/N)_1,0.0,0.0,positive
+76,Fast food (Y/N)_0.0,1.0,-0.07905007,negative
+76,Fast food (Y/N)_1.0,0.0,0.0,positive
+77,Age (yrs),0.05451392621362675,-0.060966082,negative
+77,Weight (Kg),-1.594738626455836,0.033536807,positive
+77,BMI,-1.4722791422736494,-0.104431435,negative
+77,Cycle length(days),3.3429994386770203,-0.020963913,negative
+77,FSH(mIU/mL),0.04161520455117376,-0.13376233,negative
+77,Follicle No. (L),-0.4757883393697924,-0.13571042,negative
+77,Follicle No. (R),-0.5453165545473576,-1.2961967,negative
+77,Avg. F size (L) (mm),-1.3533645070716778,0.023301778,positive
+77,Cycle(R/I)_2,0.0,0.099462025,positive
+77,Cycle(R/I)_4,1.0,0.007950696,positive
+77,Weight gain(Y/N)_0,1.0,-0.11707439,negative
+77,Weight gain(Y/N)_1,0.0,0.0053193094,positive
+77,hair growth(Y/N)_0,0.0,0.695314,positive
+77,hair growth(Y/N)_1,1.0,0.0,positive
+77,Skin darkening (Y/N)_0,0.0,0.3087138,positive
+77,Skin darkening (Y/N)_1,1.0,0.0048462898,positive
+77,Pimples(Y/N)_0,1.0,-0.17986962,negative
+77,Pimples(Y/N)_1,0.0,0.0,positive
+77,Fast food (Y/N)_0.0,0.0,0.12434885,positive
+77,Fast food (Y/N)_1.0,1.0,0.0,positive
+81,Age (yrs),0.831522376769846,-0.04980521,negative
+81,Weight (Kg),-0.19146180046951802,-0.097342804,negative
+81,BMI,0.26124411315885465,0.023713363,positive
+81,Cycle length(days),-2.1567889309856056,0.082875386,positive
+81,FSH(mIU/mL),0.6601876003556549,-0.032912947,negative
+81,Follicle No. (L),0.5151096897309322,0.043568484,positive
+81,Follicle No. (R),-0.09426697551256286,-0.20136465,negative
+81,Avg. F size (L) (mm),-0.5952737331820628,-0.22032759,negative
+81,Cycle(R/I)_2,0.0,0.753842,positive
+81,Cycle(R/I)_4,1.0,0.009785991,positive
+81,Weight gain(Y/N)_0,1.0,-0.3967577,negative
+81,Weight gain(Y/N)_1,0.0,-0.058028065,negative
+81,hair growth(Y/N)_0,1.0,-0.20309357,negative
+81,hair growth(Y/N)_1,0.0,0.0,positive
+81,Skin darkening (Y/N)_0,1.0,-0.15535837,negative
+81,Skin darkening (Y/N)_1,0.0,-0.020088412,negative
+81,Pimples(Y/N)_0,1.0,-0.28153473,negative
+81,Pimples(Y/N)_1,0.0,0.0,positive
+81,Fast food (Y/N)_0.0,1.0,-0.08326447,negative
+81,Fast food (Y/N)_1.0,0.0,0.0,positive
+84,Age (yrs),0.6372702641307911,-0.077163056,negative
+84,Weight (Kg),-1.5274582306893685,0.06716127,positive
+84,BMI,-0.9797555136691608,-0.19248536,negative
+84,Cycle length(days),0.05492220962938073,-0.024695065,negative
+84,FSH(mIU/mL),0.718178762462325,-0.047911294,negative
+84,Follicle No. (L),-0.9712373539201546,-0.30839294,negative
+84,Follicle No. (R),-0.09426697551256286,-0.56288344,negative
+84,Avg. F size (L) (mm),-0.2920374236262168,-0.18022558,negative
+84,Cycle(R/I)_2,1.0,-0.20902438,negative
+84,Cycle(R/I)_4,0.0,-0.00563082,negative
+84,Weight gain(Y/N)_0,1.0,-0.16258414,negative
+84,Weight gain(Y/N)_1,0.0,-0.05533541,negative
+84,hair growth(Y/N)_0,1.0,-0.24806201,negative
+84,hair growth(Y/N)_1,0.0,0.0,positive
+84,Skin darkening (Y/N)_0,1.0,-0.13386427,negative
+84,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+84,Pimples(Y/N)_0,1.0,-0.12663485,negative
+84,Pimples(Y/N)_1,0.0,0.0,positive
+84,Fast food (Y/N)_0.0,1.0,-0.07240878,negative
+84,Fast food (Y/N)_1.0,0.0,0.0,positive
+87,Age (yrs),-0.13973818642542804,0.03853429,positive
+87,Weight (Kg),0.42367324653818283,-0.1682896,negative
+87,BMI,0.5314004386922607,-0.10335568,negative
+87,Cycle length(days),3.003870397116029,-0.06468058,negative
+87,FSH(mIU/mL),-1.2245251681111233,0.043331746,positive
+87,Follicle No. (L),0.5151096897309322,-0.06159905,negative
+87,Follicle No. (R),0.8078321825570267,0.43597817,positive
+87,Avg. F size (L) (mm),0.01119888592962917,0.16543531,positive
+87,Cycle(R/I)_2,0.0,0.60200775,positive
+87,Cycle(R/I)_4,1.0,0.009785991,positive
+87,Weight gain(Y/N)_0,1.0,-0.45793328,negative
+87,Weight gain(Y/N)_1,0.0,-0.08832493,negative
+87,hair growth(Y/N)_0,1.0,-0.29309684,negative
+87,hair growth(Y/N)_1,0.0,0.0,positive
+87,Skin darkening (Y/N)_0,1.0,-0.17609718,negative
+87,Skin darkening (Y/N)_1,0.0,-0.035219926,negative
+87,Pimples(Y/N)_0,1.0,-0.5271827,negative
+87,Pimples(Y/N)_1,0.0,0.0,positive
+87,Fast food (Y/N)_0.0,1.0,-0.25512922,negative
+87,Fast food (Y/N)_1.0,0.0,0.0,positive
+89,Age (yrs),-1.8880072001769213,0.08090567,positive
+89,Weight (Kg),0.952304927560426,-0.30172697,negative
+89,BMI,0.09504389192765682,0.03143008,positive
+89,Cycle length(days),-2.1567889309856056,0.08071375,positive
+89,FSH(mIU/mL),0.40405996771786185,-0.063805126,negative
+89,Follicle No. (L),1.0105587042812945,0.36937162,positive
+89,Follicle No. (R),1.4844065511092188,1.1144636,positive
+89,Avg. F size (L) (mm),0.01119888592962917,0.17250997,positive
+89,Cycle(R/I)_2,0.0,0.25493482,positive
+89,Cycle(R/I)_4,1.0,0.009785991,positive
+89,Weight gain(Y/N)_0,1.0,-0.42239928,negative
+89,Weight gain(Y/N)_1,0.0,-0.06719645,negative
+89,hair growth(Y/N)_0,1.0,-0.13947092,negative
+89,hair growth(Y/N)_1,0.0,0.0,positive
+89,Skin darkening (Y/N)_0,1.0,-0.17113087,negative
+89,Skin darkening (Y/N)_1,0.0,-0.020983335,negative
+89,Pimples(Y/N)_0,1.0,-0.40258437,negative
+89,Pimples(Y/N)_1,0.0,0.0,positive
+89,Fast food (Y/N)_0.0,1.0,-0.30699697,negative
+89,Fast food (Y/N)_1.0,0.0,0.0,positive
+97,Age (yrs),-0.7224945243425924,0.12937348,positive
+97,Weight (Kg),0.7600752253705193,-0.25361186,negative
+97,BMI,1.0952855435411424,-0.071601644,negative
+97,Cycle length(days),0.05492220962938073,-0.000119043514,negative
+97,FSH(mIU/mL),-0.10336270071550138,-0.049398623,negative
+97,Follicle No. (L),2.4969057479323813,0.7479965,positive
+97,Follicle No. (R),1.4844065511092188,1.3561989,positive
+97,Avg. F size (L) (mm),0.6176715050413212,0.23352385,positive
+97,Cycle(R/I)_2,1.0,-0.09570419,negative
+97,Cycle(R/I)_4,0.0,-0.0015494553,negative
+97,Weight gain(Y/N)_0,1.0,-0.42990983,negative
+97,Weight gain(Y/N)_1,0.0,-0.061048828,negative
+97,hair growth(Y/N)_0,1.0,-0.0979815,negative
+97,hair growth(Y/N)_1,0.0,0.0,positive
+97,Skin darkening (Y/N)_0,1.0,-0.103472605,negative
+97,Skin darkening (Y/N)_1,0.0,-0.013324178,negative
+97,Pimples(Y/N)_0,1.0,-0.32809132,negative
+97,Pimples(Y/N)_1,0.0,0.0,positive
+97,Fast food (Y/N)_0.0,1.0,-0.24764088,negative
+97,Fast food (Y/N)_1.0,0.0,0.0,positive
+103,Age (yrs),1.2200266020479555,-0.24998866,negative
+103,Weight (Kg),0.45250770186666855,-0.05031216,negative
+103,BMI,1.22583930967007,0.038533375,positive
+103,Cycle length(days),-2.1567889309856056,0.03957904,positive
+103,FSH(mIU/mL),2.5861320850802763,-0.15355478,negative
+103,Follicle No. (L),1.5060077188316567,0.4555654,positive
+103,Follicle No. (R),1.2588817615918215,1.1081439,positive
+103,Avg. F size (L) (mm),0.6176715050413212,0.08516162,positive
+103,Cycle(R/I)_2,0.0,0.24743414,positive
+103,Cycle(R/I)_4,1.0,0.0060285665,positive
+103,Weight gain(Y/N)_0,0.0,0.39394447,positive
+103,Weight gain(Y/N)_1,1.0,0.10438503,positive
+103,hair growth(Y/N)_0,0.0,0.2864262,positive
+103,hair growth(Y/N)_1,1.0,0.0,positive
+103,Skin darkening (Y/N)_0,0.0,0.22166182,positive
+103,Skin darkening (Y/N)_1,1.0,0.04135549,positive
+103,Pimples(Y/N)_0,0.0,0.14815679,positive
+103,Pimples(Y/N)_1,1.0,0.0,positive
+103,Fast food (Y/N)_0.0,0.0,0.07150033,positive
+103,Fast food (Y/N)_1.0,1.0,0.0,positive
+122,Age (yrs),0.24876603885268156,-0.035540998,negative
+122,Weight (Kg),-1.1141643709810696,0.06701342,positive
+122,BMI,-0.6115041045569023,-0.102913655,negative
+122,Cycle length(days),0.05492220962938073,-0.0043538287,negative
+122,FSH(mIU/mL),1.3174207708979158,-0.114979506,negative
+122,Follicle No. (L),-1.218961861195336,-0.3511378,negative
+122,Follicle No. (R),-1.2218909230995498,-0.99838585,negative
+122,Avg. F size (L) (mm),0.01119888592962917,0.024697226,positive
+122,Cycle(R/I)_2,1.0,-0.10102847,negative
+122,Cycle(R/I)_4,0.0,-0.0021235212,negative
+122,Weight gain(Y/N)_0,1.0,-0.15276903,negative
+122,Weight gain(Y/N)_1,0.0,-0.0069189575,negative
+122,hair growth(Y/N)_0,0.0,0.37488547,positive
+122,hair growth(Y/N)_1,1.0,0.0,positive
+122,Skin darkening (Y/N)_0,1.0,-0.08854544,negative
+122,Skin darkening (Y/N)_1,0.0,-0.012505306,negative
+122,Pimples(Y/N)_0,1.0,-0.12092346,negative
+122,Pimples(Y/N)_1,0.0,0.0,positive
+122,Fast food (Y/N)_0.0,1.0,-0.22158307,negative
+122,Fast food (Y/N)_1.0,0.0,0.0,positive
+125,Age (yrs),-1.110998749620702,0.054233015,positive
+125,Weight (Kg),1.7692811618675288,-0.108014554,negative
+125,BMI,1.718627333839556,0.22171253,positive
+125,Cycle length(days),0.05492220962938073,-0.045928493,negative
+125,FSH(mIU/mL),0.0029544298133936673,-0.035077345,negative
+125,Follicle No. (L),0.5151096897309322,0.04936219,positive
+125,Follicle No. (R),0.8078321825570267,0.7659608,positive
+125,Avg. F size (L) (mm),0.31443519548547516,0.07069734,positive
+125,Cycle(R/I)_2,1.0,-0.29887223,negative
+125,Cycle(R/I)_4,0.0,-0.0015494553,negative
+125,Weight gain(Y/N)_0,0.0,0.37909472,positive
+125,Weight gain(Y/N)_1,1.0,0.1252349,positive
+125,hair growth(Y/N)_0,1.0,-0.35899973,negative
+125,hair growth(Y/N)_1,0.0,0.0,positive
+125,Skin darkening (Y/N)_0,0.0,0.3063312,positive
+125,Skin darkening (Y/N)_1,1.0,0.0562579,positive
+125,Pimples(Y/N)_0,0.0,0.20415772,positive
+125,Pimples(Y/N)_1,1.0,0.0,positive
+125,Fast food (Y/N)_0.0,0.0,0.08886762,positive
+125,Fast food (Y/N)_1.0,1.0,0.0,positive
+133,Age (yrs),-1.8880072001769213,0.17262167,positive
+133,Weight (Kg),0.039213842158369726,-0.06219027,negative
+133,BMI,0.2709734613262891,0.0046988167,positive
+133,Cycle length(days),0.05492220962938073,-0.0051055737,negative
+133,FSH(mIU/mL),0.7568395372001051,-0.2587944,negative
+133,Follicle No. (L),-0.7235128466449735,-0.39331537,negative
+133,Follicle No. (R),-0.770841344064755,-1.436706,negative
+133,Avg. F size (L) (mm),0.31443519548547516,0.031036338,positive
+133,Cycle(R/I)_2,1.0,-0.1156627,negative
+133,Cycle(R/I)_4,0.0,-0.0021235212,negative
+133,Weight gain(Y/N)_0,0.0,0.18855476,positive
+133,Weight gain(Y/N)_1,1.0,0.02887407,positive
+133,hair growth(Y/N)_0,0.0,0.5897924,positive
+133,hair growth(Y/N)_1,1.0,0.0,positive
+133,Skin darkening (Y/N)_0,0.0,0.25077176,positive
+133,Skin darkening (Y/N)_1,1.0,0.0048462898,positive
+133,Pimples(Y/N)_0,1.0,-0.18761887,negative
+133,Pimples(Y/N)_1,0.0,0.0,positive
+133,Fast food (Y/N)_0.0,0.0,0.1161852,positive
+133,Fast food (Y/N)_1.0,1.0,0.0,positive
+137,Age (yrs),-1.110998749620702,0.03011657,positive
+137,Weight (Kg),0.039213842158369726,-0.09981269,negative
+137,BMI,0.3574577397627736,-0.08137577,negative
+137,Cycle length(days),0.05492220962938073,-0.011325466,negative
+137,FSH(mIU/mL),-0.6204505628333099,-0.0073750988,negative
+137,Follicle No. (L),-0.4757883393697924,-0.27566764,negative
+137,Follicle No. (R),-0.5453165545473576,-1.009754,negative
+137,Avg. F size (L) (mm),-0.2920374236262168,-0.114756726,negative
+137,Cycle(R/I)_2,1.0,-0.15611836,negative
+137,Cycle(R/I)_4,0.0,-0.00563082,negative
+137,Weight gain(Y/N)_0,0.0,0.2070901,positive
+137,Weight gain(Y/N)_1,1.0,0.072652504,positive
+137,hair growth(Y/N)_0,1.0,-0.2738517,negative
+137,hair growth(Y/N)_1,0.0,0.0,positive
+137,Skin darkening (Y/N)_0,1.0,-0.14411959,negative
+137,Skin darkening (Y/N)_1,0.0,-0.033491205,negative
+137,Pimples(Y/N)_0,1.0,-0.16153061,negative
+137,Pimples(Y/N)_1,0.0,0.0,positive
+137,Fast food (Y/N)_0.0,1.0,-0.07859092,negative
+137,Fast food (Y/N)_1.0,0.0,0.0,positive
+138,Age (yrs),0.6372702641307911,-0.0990478,negative
+138,Weight (Kg),-1.883083179740696,0.18042158,positive
+138,BMI,-1.2953891064214822,-0.09249862,negative
+138,Cycle length(days),0.05492220962938073,0.0046249297,positive
+138,FSH(mIU/mL),-0.8669130017866576,0.28290325,positive
+138,Follicle No. (L),0.01966067518056986,0.24496117,positive
+138,Follicle No. (R),-0.5453165545473576,-0.88559794,negative
+138,Avg. F size (L) (mm),0.6176715050413212,0.030227512,positive
+138,Cycle(R/I)_2,1.0,-0.074191,negative
+138,Cycle(R/I)_4,0.0,-0.0009545272,negative
+138,Weight gain(Y/N)_0,1.0,-0.16738296,negative
+138,Weight gain(Y/N)_1,0.0,-0.006356865,negative
+138,hair growth(Y/N)_0,0.0,0.75629807,positive
+138,hair growth(Y/N)_1,1.0,0.0,positive
+138,Skin darkening (Y/N)_0,1.0,-0.10563569,negative
+138,Skin darkening (Y/N)_1,0.0,-0.03051081,negative
+138,Pimples(Y/N)_0,1.0,-0.2613369,negative
+138,Pimples(Y/N)_1,0.0,0.0,positive
+138,Fast food (Y/N)_0.0,1.0,-0.26595142,negative
+138,Fast food (Y/N)_1.0,0.0,0.0,positive
+139,Age (yrs),-0.9167466369816473,0.20607345,positive
+139,Weight (Kg),-0.05690100893658356,-0.15307167,negative
+139,BMI,-0.3161599923996206,-0.041300356,negative
+139,Cycle length(days),0.05492220962938073,0.00064408407,positive
+139,FSH(mIU/mL),-0.8379174207333225,0.16345367,positive
+139,Follicle No. (L),0.5151096897309322,0.13741812,positive
+139,Follicle No. (R),-0.31979176502996026,-0.7671831,negative
+139,Avg. F size (L) (mm),0.9209078145971672,0.17636247,positive
+139,Cycle(R/I)_2,1.0,-0.19030017,negative
+139,Cycle(R/I)_4,0.0,-0.0015494553,negative
+139,Weight gain(Y/N)_0,1.0,-0.18768603,negative
+139,Weight gain(Y/N)_1,0.0,-0.07759257,negative
+139,hair growth(Y/N)_0,1.0,-0.27128005,negative
+139,hair growth(Y/N)_1,0.0,0.0,positive
+139,Skin darkening (Y/N)_0,1.0,-0.19605112,negative
+139,Skin darkening (Y/N)_1,0.0,-0.033491205,negative
+139,Pimples(Y/N)_0,0.0,0.14793628,positive
+139,Pimples(Y/N)_1,1.0,0.0,positive
+139,Fast food (Y/N)_0.0,1.0,-0.083436534,negative
+139,Fast food (Y/N)_1.0,0.0,0.0,positive
+169,Age (yrs),-0.33399029906448285,-0.012978352,negative
+169,Weight (Kg),1.2214265106262947,-0.047775812,negative
+169,BMI,1.2255905151530435,0.08457549,positive
+169,Cycle length(days),-0.6823148372422814,0.07373564,positive
+169,FSH(mIU/mL),-1.8497665475578715,0.010236399,positive
+169,Follicle No. (L),0.7628341970061133,0.17737098,positive
+169,Follicle No. (R),1.2588817615918215,1.0965573,positive
+169,Avg. F size (L) (mm),-0.2920374236262168,-0.08004423,negative
+169,Cycle(R/I)_2,0.0,0.2621042,positive
+169,Cycle(R/I)_4,1.0,0.0060285665,positive
+169,Weight gain(Y/N)_0,0.0,0.40738076,positive
+169,Weight gain(Y/N)_1,1.0,0.0526288,positive
+169,hair growth(Y/N)_0,0.0,0.46147183,positive
+169,hair growth(Y/N)_1,1.0,0.0,positive
+169,Skin darkening (Y/N)_0,0.0,0.29378808,positive
+169,Skin darkening (Y/N)_1,1.0,0.07412033,positive
+169,Pimples(Y/N)_0,0.0,0.17804728,positive
+169,Pimples(Y/N)_1,1.0,0.0,positive
+169,Fast food (Y/N)_0.0,0.0,0.10614719,positive
+169,Fast food (Y/N)_1.0,1.0,0.0,positive
+186,Age (yrs),-0.9167466369816473,0.31402615,positive
+186,Weight (Kg),-0.53747526441135,-0.10291177,negative
+186,BMI,-0.7136215257636747,-0.19945247,negative
+186,Cycle length(days),0.05492220962938073,-0.08335278,negative
+186,FSH(mIU/mL),-1.0843798596866705,0.11494106,positive
+186,Follicle No. (L),-0.22806383209461129,-0.25932682,negative
+186,Follicle No. (R),0.13125781400483452,-0.39011666,negative
+186,Avg. F size (L) (mm),-0.5952737331820628,-0.16985716,negative
+186,Cycle(R/I)_2,1.0,-0.16608083,negative
+186,Cycle(R/I)_4,0.0,-0.00563082,negative
+186,Weight gain(Y/N)_0,1.0,-0.106644735,negative
+186,Weight gain(Y/N)_1,0.0,-0.062282905,negative
+186,hair growth(Y/N)_0,1.0,-0.40328693,negative
+186,hair growth(Y/N)_1,0.0,0.0,positive
+186,Skin darkening (Y/N)_0,0.0,0.470253,positive
+186,Skin darkening (Y/N)_1,1.0,0.08026249,positive
+186,Pimples(Y/N)_0,1.0,-0.21825755,negative
+186,Pimples(Y/N)_1,0.0,0.0,positive
+186,Fast food (Y/N)_0.0,0.0,0.07807359,positive
+186,Fast food (Y/N)_1.0,1.0,0.0,positive
+196,Age (yrs),0.6372702641307911,-0.0028104656,negative
+196,Weight (Kg),0.039213842158369726,-0.04148308,negative
+196,BMI,0.32266102320274925,-0.0245434,negative
+196,Cycle length(days),-0.6823148372422814,0.18297362,positive
+196,FSH(mIU/mL),2.5861320850802763,-0.17097668,negative
+196,Follicle No. (L),0.5151096897309322,0.10756202,positive
+196,Follicle No. (R),0.8078321825570267,1.1146287,positive
+196,Avg. F size (L) (mm),0.01119888592962917,0.12690446,positive
+196,Cycle(R/I)_2,0.0,0.6259409,positive
+196,Cycle(R/I)_4,1.0,0.009785991,positive
+196,Weight gain(Y/N)_0,0.0,0.43414196,positive
+196,Weight gain(Y/N)_1,1.0,0.12368646,positive
+196,hair growth(Y/N)_0,1.0,-0.22964256,negative
+196,hair growth(Y/N)_1,0.0,0.0,positive
+196,Skin darkening (Y/N)_0,0.0,0.30459136,positive
+196,Skin darkening (Y/N)_1,1.0,0.13786633,positive
+196,Pimples(Y/N)_0,0.0,0.1647821,positive
+196,Pimples(Y/N)_1,1.0,0.0,positive
+196,Fast food (Y/N)_0.0,0.0,0.06444466,positive
+196,Fast food (Y/N)_1.0,1.0,0.0,positive
+208,Age (yrs),0.05451392621362675,-0.08851245,negative
+208,Weight (Kg),0.039213842158369726,-0.08201361,negative
+208,BMI,1.1150063034628572,0.2686533,positive
+208,Cycle length(days),0.05492220962938073,-0.007494472,negative
+208,FSH(mIU/mL),-1.1617014091622306,0.0783754,positive
+208,Follicle No. (L),-0.7235128466449735,-0.38922814,negative
+208,Follicle No. (R),-0.5453165545473576,-1.2059226,negative
+208,Avg. F size (L) (mm),-0.2920374236262168,-0.17642254,negative
+208,Cycle(R/I)_2,0.0,0.39803627,positive
+208,Cycle(R/I)_4,1.0,0.03556292,positive
+208,Weight gain(Y/N)_0,0.0,0.33206034,positive
+208,Weight gain(Y/N)_1,1.0,0.09715322,positive
+208,hair growth(Y/N)_0,1.0,-0.20470461,negative
+208,hair growth(Y/N)_1,0.0,0.0,positive
+208,Skin darkening (Y/N)_0,1.0,-0.10767381,negative
+208,Skin darkening (Y/N)_1,0.0,-0.025327886,negative
+208,Pimples(Y/N)_0,0.0,0.0998947,positive
+208,Pimples(Y/N)_1,1.0,0.0,positive
+208,Fast food (Y/N)_0.0,1.0,-0.059915118,negative
+208,Fast food (Y/N)_1.0,0.0,0.0,positive
+212,Age (yrs),1.4142787146870104,-0.23832223,negative
+212,Weight (Kg),-0.4413604133163967,0.018237142,positive
+212,BMI,0.04812832241878268,-0.0023510745,negative
+212,Cycle length(days),-0.6823148372422814,0.03126881,positive
+212,FSH(mIU/mL),0.2542494656089643,-0.07436684,negative
+212,Follicle No. (L),1.5060077188316567,0.41192013,positive
+212,Follicle No. (R),1.033356972074424,1.1431773,positive
+212,Avg. F size (L) (mm),0.6176715050413212,0.19795741,positive
+212,Cycle(R/I)_2,0.0,0.24726275,positive
+212,Cycle(R/I)_4,1.0,0.0060285665,positive
+212,Weight gain(Y/N)_0,1.0,-0.28918228,negative
+212,Weight gain(Y/N)_1,0.0,-0.07554591,negative
+212,hair growth(Y/N)_0,0.0,0.26846597,positive
+212,hair growth(Y/N)_1,1.0,0.0,positive
+212,Skin darkening (Y/N)_0,0.0,0.18626025,positive
+212,Skin darkening (Y/N)_1,1.0,0.043610483,positive
+212,Pimples(Y/N)_0,1.0,-0.3069076,negative
+212,Pimples(Y/N)_1,0.0,0.0,positive
+212,Fast food (Y/N)_0.0,0.0,0.096085794,positive
+212,Fast food (Y/N)_1.0,1.0,0.0,positive
+219,Age (yrs),-1.110998749620702,0.03998438,positive
+219,Weight (Kg),-1.1333873412000606,0.08617235,positive
+219,BMI,-1.3325462197413784,-0.17597511,negative
+219,Cycle length(days),0.7921592565010428,-0.23365477,negative
+219,FSH(mIU/mL),0.679517987724545,-0.100297764,negative
+219,Follicle No. (L),0.01966067518056986,-0.03757751,negative
+219,Follicle No. (R),-0.09426697551256286,-0.7281862,negative
+219,Avg. F size (L) (mm),0.6176715050413212,0.11219886,positive
+219,Cycle(R/I)_2,1.0,-0.27937296,negative
+219,Cycle(R/I)_4,0.0,-0.0015494553,negative
+219,Weight gain(Y/N)_0,1.0,-0.19082633,negative
+219,Weight gain(Y/N)_1,0.0,-0.05509421,negative
+219,hair growth(Y/N)_0,1.0,-0.30029628,negative
+219,hair growth(Y/N)_1,0.0,0.0,positive
+219,Skin darkening (Y/N)_0,1.0,-0.14210616,negative
+219,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+219,Pimples(Y/N)_0,0.0,0.09668992,positive
+219,Pimples(Y/N)_1,1.0,0.0,positive
+219,Fast food (Y/N)_0.0,1.0,-0.07213301,negative
+219,Fast food (Y/N)_1.0,0.0,0.0,positive
+234,Age (yrs),-0.13973818642542804,-0.016862882,negative
+234,Weight (Kg),-0.921934668791163,0.08594258,positive
+234,BMI,-0.6825417381147609,-0.17561856,negative
+234,Cycle length(days),0.7921592565010428,-0.24039555,negative
+234,FSH(mIU/mL),0.23975167508229664,-0.14571662,negative
+234,Follicle No. (L),0.267385182455751,-0.068591416,negative
+234,Follicle No. (R),-0.31979176502996026,-0.9830706,negative
+234,Avg. F size (L) (mm),0.6176715050413212,0.07132561,positive
+234,Cycle(R/I)_2,1.0,-0.27988753,negative
+234,Cycle(R/I)_4,0.0,-0.0015494553,negative
+234,Weight gain(Y/N)_0,1.0,-0.20303568,negative
+234,Weight gain(Y/N)_1,0.0,-0.05149441,negative
+234,hair growth(Y/N)_0,1.0,-0.32970834,negative
+234,hair growth(Y/N)_1,0.0,0.0,positive
+234,Skin darkening (Y/N)_0,1.0,-0.13361505,negative
+234,Skin darkening (Y/N)_1,0.0,-0.012544228,negative
+234,Pimples(Y/N)_0,0.0,0.07633516,positive
+234,Pimples(Y/N)_1,1.0,0.0,positive
+234,Fast food (Y/N)_0.0,0.0,0.04837722,positive
+234,Fast food (Y/N)_1.0,1.0,0.0,positive
+239,Age (yrs),0.05451392621362675,-0.004862273,negative
+239,Weight (Kg),0.6159029487280894,-0.088209495,negative
+239,BMI,0.07276588034399192,0.019335097,positive
+239,Cycle length(days),-0.6823148372422814,0.12849095,positive
+239,FSH(mIU/mL),-0.49963564177774716,-0.018141925,negative
+239,Follicle No. (L),-0.22806383209461129,-0.3174507,negative
+239,Follicle No. (R),-0.31979176502996026,-0.6794547,negative
+239,Avg. F size (L) (mm),0.6176715050413212,0.15856466,positive
+239,Cycle(R/I)_2,0.0,0.70915276,positive
+239,Cycle(R/I)_4,1.0,0.03556292,positive
+239,Weight gain(Y/N)_0,1.0,-0.22528127,negative
+239,Weight gain(Y/N)_1,0.0,-0.050744276,negative
+239,hair growth(Y/N)_0,1.0,-0.16071433,negative
+239,hair growth(Y/N)_1,0.0,0.0,positive
+239,Skin darkening (Y/N)_0,0.0,0.39828134,positive
+239,Skin darkening (Y/N)_1,1.0,0.041216247,positive
+239,Pimples(Y/N)_0,0.0,0.12102388,positive
+239,Pimples(Y/N)_1,1.0,0.0,positive
+239,Fast food (Y/N)_0.0,0.0,0.05994866,positive
+239,Fast food (Y/N)_1.0,1.0,0.0,positive
+247,Age (yrs),-1.110998749620702,0.11333816,positive
+247,Weight (Kg),-0.53747526441135,-0.05014145,negative
+247,BMI,-1.025786192327133,-0.10630241,negative
+247,Cycle length(days),0.05492220962938073,-0.009497685,negative
+247,FSH(mIU/mL),-0.37398812387996205,0.0075576417,positive
+247,Follicle No. (L),-1.218961861195336,-0.22955008,negative
+247,Follicle No. (R),-0.9963661335821524,-0.86960226,negative
+247,Avg. F size (L) (mm),-0.2920374236262168,-0.14565066,negative
+247,Cycle(R/I)_2,1.0,-0.11841866,negative
+247,Cycle(R/I)_4,0.0,-0.00563082,negative
+247,Weight gain(Y/N)_0,1.0,-0.15015143,negative
+247,Weight gain(Y/N)_1,0.0,0.0022849725,positive
+247,hair growth(Y/N)_0,1.0,-0.25271544,negative
+247,hair growth(Y/N)_1,0.0,0.0,positive
+247,Skin darkening (Y/N)_0,1.0,-0.12927258,negative
+247,Skin darkening (Y/N)_1,0.0,-0.01133739,negative
+247,Pimples(Y/N)_0,1.0,-0.12017876,negative
+247,Pimples(Y/N)_1,0.0,0.0,positive
+247,Fast food (Y/N)_0.0,0.0,0.09720697,positive
+247,Fast food (Y/N)_1.0,1.0,0.0,positive
+248,Age (yrs),-1.4995029748988116,0.09847965,positive
+248,Weight (Kg),1.865396012962482,-0.07700493,negative
+248,BMI,1.2401202293940041,0.07694346,positive
+248,Cycle length(days),0.05492220962938073,0.025923587,positive
+248,FSH(mIU/mL),-0.8717455986288802,0.16139175,positive
+248,Follicle No. (L),1.0105587042812945,0.376624,positive
+248,Follicle No. (R),1.9354561301440136,1.1798363,positive
+248,Avg. F size (L) (mm),0.9209078145971672,0.104785636,positive
+248,Cycle(R/I)_2,1.0,-0.08784021,negative
+248,Cycle(R/I)_4,0.0,-0.0009545272,negative
+248,Weight gain(Y/N)_0,0.0,0.38294357,positive
+248,Weight gain(Y/N)_1,1.0,0.060371652,positive
+248,hair growth(Y/N)_0,0.0,0.40528435,positive
+248,hair growth(Y/N)_1,1.0,0.0,positive
+248,Skin darkening (Y/N)_0,0.0,0.2783171,positive
+248,Skin darkening (Y/N)_1,1.0,0.031734277,positive
+248,Pimples(Y/N)_0,0.0,0.15584369,positive
+248,Pimples(Y/N)_1,1.0,0.0,positive
+248,Fast food (Y/N)_0.0,0.0,0.09975692,positive
+248,Fast food (Y/N)_1.0,1.0,0.0,positive
+249,Age (yrs),0.24876603885268156,0.0017553275,positive
+249,Weight (Kg),0.5197880976331362,-0.03835637,negative
+249,BMI,0.9142061511090496,-0.026561618,negative
+249,Cycle length(days),0.05492220962938073,0.033716716,positive
+249,FSH(mIU/mL),0.2639146592934091,-0.03277214,negative
+249,Follicle No. (L),0.267385182455751,0.1205955,positive
+249,Follicle No. (R),0.8078321825570267,1.2428124,positive
+249,Avg. F size (L) (mm),0.31443519548547516,0.07311721,positive
+249,Cycle(R/I)_2,0.0,0.3574527,positive
+249,Cycle(R/I)_4,1.0,0.0060285665,positive
+249,Weight gain(Y/N)_0,0.0,0.38333797,positive
+249,Weight gain(Y/N)_1,1.0,0.11493957,positive
+249,hair growth(Y/N)_0,0.0,0.52699006,positive
+249,hair growth(Y/N)_1,1.0,0.0,positive
+249,Skin darkening (Y/N)_0,0.0,0.22617832,positive
+249,Skin darkening (Y/N)_1,1.0,0.09891148,positive
+249,Pimples(Y/N)_0,0.0,0.20989463,positive
+249,Pimples(Y/N)_1,1.0,0.0,positive
+249,Fast food (Y/N)_0.0,0.0,0.10961383,positive
+249,Fast food (Y/N)_1.0,1.0,0.0,positive
+253,Age (yrs),2.4302172637892703,-0.13024852,negative
+253,Weight (Kg),0.29872394011474385,0.010113389,positive
+253,BMI,0.5677258109236364,-0.003790441,negative
+253,Cycle length(days),-0.6823148372422814,0.04206778,positive
+253,FSH(mIU/mL),-1.4468246228533588,0.008016985,positive
+253,Follicle No. (L),2.001456733382019,0.57624453,positive
+253,Follicle No. (R),1.033356972074424,0.8145186,positive
+253,Avg. F size (L) (mm),0.31443519548547516,0.0703487,positive
+253,Cycle(R/I)_2,0.0,0.28729296,positive
+253,Cycle(R/I)_4,1.0,0.0060285665,positive
+253,Weight gain(Y/N)_0,0.0,0.4836172,positive
+253,Weight gain(Y/N)_1,1.0,0.045982245,positive
+253,hair growth(Y/N)_0,0.0,0.34396675,positive
+253,hair growth(Y/N)_1,1.0,0.0,positive
+253,Skin darkening (Y/N)_0,0.0,0.21962062,positive
+253,Skin darkening (Y/N)_1,1.0,0.051662937,positive
+253,Pimples(Y/N)_0,1.0,-0.2670558,negative
+253,Pimples(Y/N)_1,0.0,0.0,positive
+253,Fast food (Y/N)_0.0,1.0,-0.14633751,negative
+253,Fast food (Y/N)_1.0,0.0,0.0,positive
+255,Age (yrs),-0.7224945243425924,0.1893877,positive
+255,Weight (Kg),-0.7297049666012565,0.06453796,positive
+255,BMI,-0.7538977428861384,-0.20533285,negative
+255,Cycle length(days),0.05492220962938073,-0.0232543,negative
+255,FSH(mIU/mL),1.9649887477557317,-0.11024428,negative
+255,Follicle No. (L),-0.9712373539201546,-0.32041246,negative
+255,Follicle No. (R),-0.770841344064755,-1.0880296,negative
+255,Avg. F size (L) (mm),0.01119888592962917,0.047163747,positive
+255,Cycle(R/I)_2,1.0,-0.16023672,negative
+255,Cycle(R/I)_4,0.0,-0.00563082,negative
+255,Weight gain(Y/N)_0,1.0,-0.13604859,negative
+255,Weight gain(Y/N)_1,0.0,-0.050233603,negative
+255,hair growth(Y/N)_0,1.0,-0.16150087,negative
+255,hair growth(Y/N)_1,0.0,0.0,positive
+255,Skin darkening (Y/N)_0,1.0,-0.11574667,negative
+255,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+255,Pimples(Y/N)_0,0.0,0.08032244,positive
+255,Pimples(Y/N)_1,1.0,0.0,positive
+255,Fast food (Y/N)_0.0,1.0,-0.098537445,negative
+255,Fast food (Y/N)_1.0,0.0,0.0,positive
+256,Age (yrs),0.831522376769846,-0.0786339,negative
+256,Weight (Kg),-2.4818787020622546,0.15400091,positive
+256,BMI,-2.552087529216869,-0.081502765,negative
+256,Cycle length(days),0.7921592565010428,-0.1063737,negative
+256,FSH(mIU/mL),-1.7174500460178188,0.09132445,positive
+256,Follicle No. (L),-0.22806383209461129,-0.28024974,negative
+256,Follicle No. (R),0.13125781400483452,-0.54817134,negative
+256,Avg. F size (L) (mm),0.31443519548547516,0.11199949,positive
+256,Cycle(R/I)_2,1.0,-0.27346572,negative
+256,Cycle(R/I)_4,0.0,-0.0022248416,negative
+256,Weight gain(Y/N)_0,1.0,-0.061837584,negative
+256,Weight gain(Y/N)_1,0.0,-0.07766713,negative
+256,hair growth(Y/N)_0,1.0,-0.29549432,negative
+256,hair growth(Y/N)_1,0.0,0.0,positive
+256,Skin darkening (Y/N)_0,1.0,-0.12725773,negative
+256,Skin darkening (Y/N)_1,0.0,-0.035219926,negative
+256,Pimples(Y/N)_0,0.0,0.11292857,positive
+256,Pimples(Y/N)_1,1.0,0.0,positive
+256,Fast food (Y/N)_0.0,1.0,-0.077266134,negative
+256,Fast food (Y/N)_1.0,0.0,0.0,positive
+264,Age (yrs),1.0257744894089007,-0.07756134,negative
+264,Weight (Kg),-1.4025089242659294,0.069731206,positive
+264,BMI,-1.5036550154735377,-0.13793463,negative
+264,Cycle length(days),0.05492220962938073,-0.024300572,negative
+264,FSH(mIU/mL),2.5861320850802763,-0.099245526,negative
+264,Follicle No. (L),-0.22806383209461129,-0.24553674,negative
+264,Follicle No. (R),-0.31979176502996026,-0.88444465,negative
+264,Avg. F size (L) (mm),1.224144124153013,0.09057587,positive
+264,Cycle(R/I)_2,1.0,-0.27513537,negative
+264,Cycle(R/I)_4,0.0,-0.0022248416,negative
+264,Weight gain(Y/N)_0,1.0,-0.13235836,negative
+264,Weight gain(Y/N)_1,0.0,-0.05814203,negative
+264,hair growth(Y/N)_0,1.0,-0.27988055,negative
+264,hair growth(Y/N)_1,0.0,0.0,positive
+264,Skin darkening (Y/N)_0,1.0,-0.13033268,negative
+264,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+264,Pimples(Y/N)_0,0.0,0.091138564,positive
+264,Pimples(Y/N)_1,1.0,0.0,positive
+264,Fast food (Y/N)_0.0,1.0,-0.068604425,negative
+264,Fast food (Y/N)_1.0,0.0,0.0,positive
+272,Age (yrs),-1.110998749620702,0.03012248,positive
+272,Weight (Kg),-0.3740800175499291,-0.042292528,negative
+272,BMI,-0.7913341828342615,-0.11073742,negative
+272,Cycle length(days),0.7921592565010428,-0.10057487,negative
+272,FSH(mIU/mL),0.6021964382489847,-0.08652699,negative
+272,Follicle No. (L),-0.9712373539201546,-0.31072226,negative
+272,Follicle No. (R),-0.770841344064755,-1.0806036,negative
+272,Avg. F size (L) (mm),0.9209078145971672,0.18056326,positive
+272,Cycle(R/I)_2,1.0,-0.15955861,negative
+272,Cycle(R/I)_4,0.0,-0.00563082,negative
+272,Weight gain(Y/N)_0,1.0,-0.1331597,negative
+272,Weight gain(Y/N)_1,0.0,-0.050233603,negative
+272,hair growth(Y/N)_0,1.0,-0.15951298,negative
+272,hair growth(Y/N)_1,0.0,0.0,positive
+272,Skin darkening (Y/N)_0,1.0,-0.11447597,negative
+272,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+272,Pimples(Y/N)_0,0.0,0.07589005,positive
+272,Pimples(Y/N)_1,1.0,0.0,positive
+272,Fast food (Y/N)_0.0,1.0,-0.10303608,negative
+272,Fast food (Y/N)_1.0,0.0,0.0,positive
+288,Age (yrs),-0.5282424117035376,0.1322792,positive
+288,Weight (Kg),-0.6335901155063033,-0.032178212,negative
+288,BMI,-0.34408285061809485,-0.008651733,negative
+288,Cycle length(days),0.05492220962938073,0.0061573214,positive
+288,FSH(mIU/mL),0.5732008571956494,-0.19983384,negative
+288,Follicle No. (L),1.0105587042812945,0.620818,positive
+288,Follicle No. (R),0.13125781400483452,-0.40910327,negative
+288,Avg. F size (L) (mm),0.9209078145971672,0.081348695,positive
+288,Cycle(R/I)_2,1.0,-0.14239143,negative
+288,Cycle(R/I)_4,0.0,-0.0009545272,negative
+288,Weight gain(Y/N)_0,1.0,-0.21707234,negative
+288,Weight gain(Y/N)_1,0.0,-0.056513116,negative
+288,hair growth(Y/N)_0,0.0,0.680157,positive
+288,hair growth(Y/N)_1,1.0,0.0,positive
+288,Skin darkening (Y/N)_0,0.0,0.39326435,positive
+288,Skin darkening (Y/N)_1,1.0,0.046944804,positive
+288,Pimples(Y/N)_0,0.0,0.28114593,positive
+288,Pimples(Y/N)_1,1.0,0.0,positive
+288,Fast food (Y/N)_0.0,1.0,-0.0923037,negative
+288,Fast food (Y/N)_1.0,0.0,0.0,positive
+289,Age (yrs),0.6372702641307911,-0.09997626,negative
+289,Weight (Kg),0.6159029487280894,-0.030474328,negative
+289,BMI,0.8371257529479674,-0.027122935,negative
+289,Cycle length(days),-1.4195518841139434,0.042885114,positive
+289,FSH(mIU/mL),0.7906677150956624,-0.06861056,negative
+289,Follicle No. (L),-1.218961861195336,-0.34639797,negative
+289,Follicle No. (R),-1.4474157126169471,-1.1181226,negative
+289,Avg. F size (L) (mm),0.01119888592962917,0.15248269,positive
+289,Cycle(R/I)_2,0.0,0.5251804,positive
+289,Cycle(R/I)_4,1.0,0.03556292,positive
+289,Weight gain(Y/N)_0,0.0,0.27826163,positive
+289,Weight gain(Y/N)_1,1.0,0.03289275,positive
+289,hair growth(Y/N)_0,1.0,-0.13189721,negative
+289,hair growth(Y/N)_1,0.0,0.0,positive
+289,Skin darkening (Y/N)_0,1.0,-0.07698286,negative
+289,Skin darkening (Y/N)_1,0.0,0.0062890872,positive
+289,Pimples(Y/N)_0,1.0,-0.21499914,negative
+289,Pimples(Y/N)_1,0.0,0.0,positive
+289,Fast food (Y/N)_0.0,0.0,0.07333213,positive
+289,Fast food (Y/N)_1.0,1.0,0.0,positive
+296,Age (yrs),-0.33399029906448285,-0.00239007,negative
+296,Weight (Kg),-0.24913071112649013,0.081638396,positive
+296,BMI,-0.1393263765075556,0.025461879,positive
+296,Cycle length(days),0.05492220962938073,-0.037037294,negative
+296,FSH(mIU/mL),0.2880776435045216,0.002888523,positive
+296,Follicle No. (L),0.7628341970061133,-0.03860861,negative
+296,Follicle No. (R),0.8078321825570267,0.85699415,positive
+296,Avg. F size (L) (mm),0.9209078145971672,0.30396497,positive
+296,Cycle(R/I)_2,1.0,-0.26949006,negative
+296,Cycle(R/I)_4,0.0,-0.0015494553,negative
+296,Weight gain(Y/N)_0,1.0,-0.23247442,negative
+296,Weight gain(Y/N)_1,0.0,-0.08766477,negative
+296,hair growth(Y/N)_0,1.0,-0.33765665,negative
+296,hair growth(Y/N)_1,0.0,0.0,positive
+296,Skin darkening (Y/N)_0,1.0,-0.1429486,negative
+296,Skin darkening (Y/N)_1,0.0,-0.030670168,negative
+296,Pimples(Y/N)_0,1.0,-0.37515813,negative
+296,Pimples(Y/N)_1,0.0,0.0,positive
+296,Fast food (Y/N)_0.0,0.0,0.18371944,positive
+296,Fast food (Y/N)_1.0,1.0,0.0,positive
+297,Age (yrs),-0.13973818642542804,-0.04081238,negative
+297,Weight (Kg),-0.921934668791163,0.092793256,positive
+297,BMI,-0.8987891438618518,-0.20063603,negative
+297,Cycle length(days),-0.6823148372422814,0.15643512,positive
+297,FSH(mIU/mL),0.8815205357294458,-0.12043347,negative
+297,Follicle No. (L),0.5151096897309322,0.09942535,positive
+297,Follicle No. (R),-0.31979176502996026,-0.86720705,negative
+297,Avg. F size (L) (mm),0.6176715050413212,0.05661232,positive
+297,Cycle(R/I)_2,1.0,-0.30237645,negative
+297,Cycle(R/I)_4,0.0,-0.0015494553,negative
+297,Weight gain(Y/N)_0,1.0,-0.22120097,negative
+297,Weight gain(Y/N)_1,0.0,-0.031110471,negative
+297,hair growth(Y/N)_0,1.0,-0.308614,negative
+297,hair growth(Y/N)_1,0.0,0.0,positive
+297,Skin darkening (Y/N)_0,0.0,0.32550293,positive
+297,Skin darkening (Y/N)_1,1.0,0.050212815,positive
+297,Pimples(Y/N)_0,0.0,0.1761483,positive
+297,Pimples(Y/N)_1,1.0,0.0,positive
+297,Fast food (Y/N)_0.0,1.0,-0.056169745,negative
+297,Fast food (Y/N)_1.0,0.0,0.0,positive
+300,Age (yrs),-1.110998749620702,0.15076965,positive
+300,Weight (Kg),-0.921934668791163,0.048363388,positive
+300,BMI,-0.6825417381147609,-0.15496066,negative
+300,Cycle length(days),0.05492220962938073,-0.019272279,negative
+300,FSH(mIU/mL),0.3992273708756394,-0.15100035,negative
+300,Follicle No. (L),-1.218961861195336,-0.13949203,negative
+300,Follicle No. (R),-1.4474157126169471,-1.1303219,negative
+300,Avg. F size (L) (mm),0.01119888592962917,0.13208736,positive
+300,Cycle(R/I)_2,0.0,0.2689941,positive
+300,Cycle(R/I)_4,1.0,0.03556292,positive
+300,Weight gain(Y/N)_0,1.0,-0.12201289,negative
+300,Weight gain(Y/N)_1,0.0,0.007116001,positive
+300,hair growth(Y/N)_0,1.0,-0.14730182,negative
+300,hair growth(Y/N)_1,0.0,0.0,positive
+300,Skin darkening (Y/N)_0,0.0,0.26729715,positive
+300,Skin darkening (Y/N)_1,1.0,-0.028597534,negative
+300,Pimples(Y/N)_0,1.0,-0.16948655,negative
+300,Pimples(Y/N)_1,0.0,0.0,positive
+300,Fast food (Y/N)_0.0,0.0,0.10076325,positive
+300,Fast food (Y/N)_1.0,1.0,0.0,positive
+303,Age (yrs),-1.110998749620702,0.069956645,positive
+303,Weight (Kg),0.42367324653818283,-0.05834919,negative
+303,BMI,0.8028564688397948,-0.031508505,negative
+303,Cycle length(days),-1.4195518841139434,0.08028211,positive
+303,FSH(mIU/mL),0.12860194771117878,-0.08413402,negative
+303,Follicle No. (L),-0.7235128466449735,-0.27007866,negative
+303,Follicle No. (R),-0.5453165545473576,-0.9935297,negative
+303,Avg. F size (L) (mm),0.31443519548547516,0.11781073,positive
+303,Cycle(R/I)_2,0.0,0.46267027,positive
+303,Cycle(R/I)_4,1.0,0.03556292,positive
+303,Weight gain(Y/N)_0,1.0,-0.2388004,negative
+303,Weight gain(Y/N)_1,0.0,-0.026584718,negative
+303,hair growth(Y/N)_0,1.0,-0.100407995,negative
+303,hair growth(Y/N)_1,0.0,0.0,positive
+303,Skin darkening (Y/N)_0,1.0,-0.12738365,negative
+303,Skin darkening (Y/N)_1,0.0,-0.020088412,negative
+303,Pimples(Y/N)_0,1.0,-0.18635258,negative
+303,Pimples(Y/N)_1,0.0,0.0,positive
+303,Fast food (Y/N)_0.0,1.0,-0.1089058,negative
+303,Fast food (Y/N)_1.0,0.0,0.0,positive
+317,Age (yrs),-0.33399029906448285,-0.08924655,negative
+317,Weight (Kg),0.6159029487280894,-0.04446449,negative
+317,BMI,1.1313090806167077,0.2278808,positive
+317,Cycle length(days),0.05492220962938073,0.02078253,positive
+317,FSH(mIU/mL),-0.7122699028355375,0.024801381,positive
+317,Follicle No. (L),0.5151096897309322,0.19507723,positive
+317,Follicle No. (R),-0.5453165545473576,-1.0854954,negative
+317,Avg. F size (L) (mm),0.31443519548547516,0.0670692,positive
+317,Cycle(R/I)_2,1.0,-0.25636274,negative
+317,Cycle(R/I)_4,0.0,-0.0015494553,negative
+317,Weight gain(Y/N)_0,0.0,0.30598608,positive
+317,Weight gain(Y/N)_1,1.0,0.104374826,positive
+317,hair growth(Y/N)_0,1.0,-0.2937407,negative
+317,hair growth(Y/N)_1,0.0,0.0,positive
+317,Skin darkening (Y/N)_0,1.0,-0.08276087,negative
+317,Skin darkening (Y/N)_1,0.0,-0.022218216,negative
+317,Pimples(Y/N)_0,0.0,0.1778129,positive
+317,Pimples(Y/N)_1,1.0,0.0,positive
+317,Fast food (Y/N)_0.0,0.0,0.045993634,positive
+317,Fast food (Y/N)_1.0,1.0,0.0,positive
+320,Age (yrs),0.05451392621362675,-0.045642514,negative
+320,Weight (Kg),0.039213842158369726,-0.08922681,negative
+320,BMI,0.2711361255771794,-0.061857134,negative
+320,Cycle length(days),0.05492220962938073,-0.004926477,negative
+320,FSH(mIU/mL),0.5587030666689823,-0.141882,negative
+320,Follicle No. (L),-1.218961861195336,-0.38173747,negative
+320,Follicle No. (R),-0.9963661335821524,-1.173801,negative
+320,Avg. F size (L) (mm),0.31443519548547516,0.06294496,positive
+320,Cycle(R/I)_2,1.0,-0.2292534,negative
+320,Cycle(R/I)_4,0.0,-0.00563082,negative
+320,Weight gain(Y/N)_0,0.0,0.21011937,positive
+320,Weight gain(Y/N)_1,1.0,0.025851863,positive
+320,hair growth(Y/N)_0,1.0,-0.24629834,negative
+320,hair growth(Y/N)_1,0.0,0.0,positive
+320,Skin darkening (Y/N)_0,1.0,-0.08422058,negative
+320,Skin darkening (Y/N)_1,0.0,-0.012544228,negative
+320,Pimples(Y/N)_0,0.0,0.11334934,positive
+320,Pimples(Y/N)_1,1.0,0.0,positive
+320,Fast food (Y/N)_0.0,0.0,0.041039832,positive
+320,Fast food (Y/N)_1.0,1.0,0.0,positive
+324,Age (yrs),1.0257744894089007,-0.078386895,negative
+324,Weight (Kg),-0.3452455622214434,-0.024073943,negative
+324,BMI,-0.25018081687101934,0.017789198,positive
+324,Cycle length(days),-2.1567889309856056,0.07902773,positive
+324,FSH(mIU/mL),-1.3598378796933535,0.039430328,positive
+324,Follicle No. (L),2.001456733382019,0.54784834,positive
+324,Follicle No. (R),2.8375552882136033,1.3194877,positive
+324,Avg. F size (L) (mm),0.9209078145971672,0.18728553,positive
+324,Cycle(R/I)_2,0.0,0.3045476,positive
+324,Cycle(R/I)_4,1.0,0.009785991,positive
+324,Weight gain(Y/N)_0,0.0,0.29344043,positive
+324,Weight gain(Y/N)_1,1.0,0.080210574,positive
+324,hair growth(Y/N)_0,1.0,-0.10538239,negative
+324,hair growth(Y/N)_1,0.0,0.0,positive
+324,Skin darkening (Y/N)_0,0.0,0.21995533,positive
+324,Skin darkening (Y/N)_1,1.0,0.051432654,positive
+324,Pimples(Y/N)_0,0.0,0.17611757,positive
+324,Pimples(Y/N)_1,1.0,0.0,positive
+324,Fast food (Y/N)_0.0,0.0,0.06793366,positive
+324,Fast food (Y/N)_1.0,1.0,0.0,positive
+325,Age (yrs),1.608530827326065,-0.09437763,negative
+325,Weight (Kg),0.42367324653818283,-0.07539055,negative
+325,BMI,0.3493336669444094,-0.054333486,negative
+325,Cycle length(days),0.05492220962938073,-0.038379747,negative
+325,FSH(mIU/mL),0.6408572129867648,-0.06900909,negative
+325,Follicle No. (L),-0.4757883393697924,-0.44154266,negative
+325,Follicle No. (R),0.13125781400483452,-0.6199839,negative
+325,Avg. F size (L) (mm),-1.5049826618496007,-0.13596079,negative
+325,Cycle(R/I)_2,1.0,-0.2854561,negative
+325,Cycle(R/I)_4,0.0,-0.00563082,negative
+325,Weight gain(Y/N)_0,0.0,0.12628533,positive
+325,Weight gain(Y/N)_1,1.0,0.102877766,positive
+325,hair growth(Y/N)_0,1.0,-0.42853484,negative
+325,hair growth(Y/N)_1,0.0,0.0,positive
+325,Skin darkening (Y/N)_0,1.0,-0.15056114,negative
+325,Skin darkening (Y/N)_1,0.0,-0.030670168,negative
+325,Pimples(Y/N)_0,0.0,0.118619725,positive
+325,Pimples(Y/N)_1,1.0,0.0,positive
+325,Fast food (Y/N)_0.0,0.0,0.0399277,positive
+325,Fast food (Y/N)_1.0,1.0,0.0,positive
+326,Age (yrs),0.6372702641307911,-0.1011601,negative
+326,Weight (Kg),-0.24913071112649013,-0.0561475,negative
+326,BMI,-0.3805100524830691,-0.09419921,negative
+326,Cycle length(days),0.7921592565010428,-0.087065235,negative
+326,FSH(mIU/mL),-0.38365331756440685,0.00681673,positive
+326,Follicle No. (L),-0.4757883393697924,-0.2618799,negative
+326,Follicle No. (R),-0.5453165545473576,-0.92446566,negative
+326,Avg. F size (L) (mm),-1.5049826618496007,-0.15045449,negative
+326,Cycle(R/I)_2,1.0,-0.11237335,negative
+326,Cycle(R/I)_4,0.0,-0.00563082,negative
+326,Weight gain(Y/N)_0,1.0,-0.13475472,negative
+326,Weight gain(Y/N)_1,0.0,-0.07949497,negative
+326,hair growth(Y/N)_0,1.0,-0.3597099,negative
+326,hair growth(Y/N)_1,0.0,0.0,positive
+326,Skin darkening (Y/N)_0,1.0,-0.13959837,negative
+326,Skin darkening (Y/N)_1,0.0,-0.01133739,negative
+326,Pimples(Y/N)_0,0.0,0.0684566,positive
+326,Pimples(Y/N)_1,1.0,0.0,positive
+326,Fast food (Y/N)_0.0,0.0,0.0485402,positive
+326,Fast food (Y/N)_1.0,1.0,0.0,positive
+327,Age (yrs),2.4302172637892703,-0.03786553,negative
+327,Weight (Kg),-0.53747526441135,-0.06670082,negative
+327,BMI,-0.22411496974860998,-0.039767496,negative
+327,Cycle length(days),0.7921592565010428,-0.087065235,negative
+327,FSH(mIU/mL),0.1914257066600713,-0.094554655,negative
+327,Follicle No. (L),-0.9712373539201546,-0.2796783,negative
+327,Follicle No. (R),-0.5453165545473576,-0.84559935,negative
+327,Avg. F size (L) (mm),-1.5049826618496007,-0.14688627,negative
+327,Cycle(R/I)_2,1.0,-0.12258214,negative
+327,Cycle(R/I)_4,0.0,-0.00563082,negative
+327,Weight gain(Y/N)_0,1.0,-0.1427502,negative
+327,Weight gain(Y/N)_1,0.0,-0.06128349,negative
+327,hair growth(Y/N)_0,1.0,-0.19467296,negative
+327,hair growth(Y/N)_1,0.0,0.0,positive
+327,Skin darkening (Y/N)_0,1.0,-0.12149985,negative
+327,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+327,Pimples(Y/N)_0,0.0,0.0851742,positive
+327,Pimples(Y/N)_1,1.0,0.0,positive
+327,Fast food (Y/N)_0.0,1.0,-0.05532781,negative
+327,Fast food (Y/N)_1.0,0.0,0.0,positive
+352,Age (yrs),0.831522376769846,-0.07968402,negative
+352,Weight (Kg),-0.53747526441135,-0.042074554,negative
+352,BMI,0.11474104284271942,-0.052735507,negative
+352,Cycle length(days),-2.1567889309856056,0.044399712,positive
+352,FSH(mIU/mL),0.1865931098178489,-0.17579433,negative
+352,Follicle No. (L),1.0105587042812945,0.6112146,positive
+352,Follicle No. (R),0.13125781400483452,-0.08275706,negative
+352,Avg. F size (L) (mm),-0.5952737331820628,-0.19045465,negative
+352,Cycle(R/I)_2,0.0,0.48808786,positive
+352,Cycle(R/I)_4,1.0,0.0060285665,positive
+352,Weight gain(Y/N)_0,1.0,-0.36844766,negative
+352,Weight gain(Y/N)_1,0.0,-0.08813756,negative
+352,hair growth(Y/N)_0,0.0,0.4113451,positive
+352,hair growth(Y/N)_1,1.0,0.0,positive
+352,Skin darkening (Y/N)_0,1.0,-0.20774373,negative
+352,Skin darkening (Y/N)_1,0.0,-0.017447054,negative
+352,Pimples(Y/N)_0,0.0,0.21883434,positive
+352,Pimples(Y/N)_1,1.0,0.0,positive
+352,Fast food (Y/N)_0.0,0.0,0.06823473,positive
+352,Fast food (Y/N)_1.0,1.0,0.0,positive
+360,Age (yrs),0.831522376769846,-0.07420607,negative
+360,Weight (Kg),0.135328693253323,-0.09011637,negative
+360,BMI,0.3753995140668188,-0.06810353,negative
+360,Cycle length(days),0.7921592565010428,-0.098842956,negative
+360,FSH(mIU/mL),-0.9780627291577754,0.08026347,positive
+360,Follicle No. (L),-0.9712373539201546,-0.34366566,negative
+360,Follicle No. (R),-0.770841344064755,-0.9341675,negative
+360,Avg. F size (L) (mm),-0.5952737331820628,-0.15072276,negative
+360,Cycle(R/I)_2,1.0,-0.15799579,negative
+360,Cycle(R/I)_4,0.0,-0.00563082,negative
+360,Weight gain(Y/N)_0,0.0,0.2027111,positive
+360,Weight gain(Y/N)_1,1.0,0.10752456,positive
+360,hair growth(Y/N)_0,1.0,-0.2603593,negative
+360,hair growth(Y/N)_1,0.0,0.0,positive
+360,Skin darkening (Y/N)_0,1.0,-0.142539,negative
+360,Skin darkening (Y/N)_1,0.0,-0.033491205,negative
+360,Pimples(Y/N)_0,0.0,0.075749986,positive
+360,Pimples(Y/N)_1,1.0,0.0,positive
+360,Fast food (Y/N)_0.0,1.0,-0.063871674,negative
+360,Fast food (Y/N)_1.0,0.0,0.0,positive
+361,Age (yrs),0.44301815149173635,-0.04992378,negative
+361,Weight (Kg),0.135328693253323,-0.09258391,negative
+361,BMI,0.3753995140668188,-0.050859377,negative
+361,Cycle length(days),0.05492220962938073,-0.009615806,negative
+361,FSH(mIU/mL),0.7471743435156599,-0.055236652,negative
+361,Follicle No. (L),-0.7235128466449735,-0.35831794,negative
+361,Follicle No. (R),-0.770841344064755,-1.0188667,negative
+361,Avg. F size (L) (mm),-0.5952737331820628,-0.12723745,negative
+361,Cycle(R/I)_2,1.0,-0.15694803,negative
+361,Cycle(R/I)_4,0.0,-0.00563082,negative
+361,Weight gain(Y/N)_0,0.0,0.22419988,positive
+361,Weight gain(Y/N)_1,1.0,0.07668828,positive
+361,hair growth(Y/N)_0,1.0,-0.22331166,negative
+361,hair growth(Y/N)_1,0.0,0.0,positive
+361,Skin darkening (Y/N)_0,1.0,-0.092133105,negative
+361,Skin darkening (Y/N)_1,0.0,-0.014936609,negative
+361,Pimples(Y/N)_0,1.0,-0.14756504,negative
+361,Pimples(Y/N)_1,0.0,0.0,positive
+361,Fast food (Y/N)_0.0,1.0,-0.037366875,negative
+361,Fast food (Y/N)_1.0,0.0,0.0,positive
+362,Age (yrs),0.6372702641307911,-0.12428656,negative
+362,Weight (Kg),0.2314435443482763,-0.083607405,negative
+362,BMI,1.0531115392494776,0.28224742,positive
+362,Cycle length(days),0.7921592565010428,-0.098842956,negative
+362,FSH(mIU/mL),-1.0457190849488904,0.08366608,positive
+362,Follicle No. (L),-0.9712373539201546,-0.321118,negative
+362,Follicle No. (R),-0.770841344064755,-0.8600962,negative
+362,Avg. F size (L) (mm),-1.5049826618496007,-0.1159697,negative
+362,Cycle(R/I)_2,1.0,-0.15590024,negative
+362,Cycle(R/I)_4,0.0,-0.00563082,negative
+362,Weight gain(Y/N)_0,0.0,0.23626007,positive
+362,Weight gain(Y/N)_1,1.0,0.10752456,positive
+362,hair growth(Y/N)_0,1.0,-0.25828028,negative
+362,hair growth(Y/N)_1,0.0,0.0,positive
+362,Skin darkening (Y/N)_0,1.0,-0.1272396,negative
+362,Skin darkening (Y/N)_1,0.0,-0.025327886,negative
+362,Pimples(Y/N)_0,0.0,0.08107556,positive
+362,Pimples(Y/N)_1,1.0,0.0,positive
+362,Fast food (Y/N)_0.0,1.0,-0.06199462,negative
+362,Fast food (Y/N)_1.0,0.0,0.0,positive
+367,Age (yrs),-1.6937550875378664,0.041464146,positive
+367,Weight (Kg),0.7120177998230427,-0.1231603,negative
+367,BMI,1.235572469106347,0.09842531,positive
+367,Cycle length(days),-2.1567889309856056,0.16672704,positive
+367,FSH(mIU/mL),-0.7944240491533201,0.08264664,positive
+367,Follicle No. (L),0.5151096897309322,0.14806421,positive
+367,Follicle No. (R),1.033356972074424,1.0771196,positive
+367,Avg. F size (L) (mm),-0.5952737331820628,-0.23753145,negative
+367,Cycle(R/I)_2,0.0,0.30472258,positive
+367,Cycle(R/I)_4,1.0,0.009785991,positive
+367,Weight gain(Y/N)_0,0.0,0.5240986,positive
+367,Weight gain(Y/N)_1,1.0,0.09514081,positive
+367,hair growth(Y/N)_0,1.0,-0.24086186,negative
+367,hair growth(Y/N)_1,0.0,0.0,positive
+367,Skin darkening (Y/N)_0,0.0,0.30141726,positive
+367,Skin darkening (Y/N)_1,1.0,0.12883392,positive
+367,Pimples(Y/N)_0,0.0,0.17485912,positive
+367,Pimples(Y/N)_1,1.0,0.0,positive
+367,Fast food (Y/N)_0.0,1.0,-0.1896284,negative
+367,Fast food (Y/N)_1.0,0.0,0.0,positive
+374,Age (yrs),-0.7224945243425924,0.20236802,positive
+374,Weight (Kg),-1.6908534775507893,0.13076012,positive
+374,BMI,-2.205119351051765,-0.12563604,negative
+374,Cycle length(days),0.05492220962938073,-0.0036288835,negative
+374,FSH(mIU/mL),-1.1037102470555606,0.19286156,positive
+374,Follicle No. (L),0.5151096897309322,0.1887243,positive
+374,Follicle No. (R),0.13125781400483452,-0.5001665,negative
+374,Avg. F size (L) (mm),0.01119888592962917,0.027539408,positive
+374,Cycle(R/I)_2,1.0,-0.259696,negative
+374,Cycle(R/I)_4,0.0,-0.0009843651,negative
+374,Weight gain(Y/N)_0,1.0,-0.09426479,negative
+374,Weight gain(Y/N)_1,0.0,-0.09093532,negative
+374,hair growth(Y/N)_0,1.0,-0.29420537,negative
+374,hair growth(Y/N)_1,0.0,0.0,positive
+374,Skin darkening (Y/N)_0,1.0,-0.16291693,negative
+374,Skin darkening (Y/N)_1,0.0,-0.035219926,negative
+374,Pimples(Y/N)_0,0.0,0.20525463,positive
+374,Pimples(Y/N)_1,1.0,0.0,positive
+374,Fast food (Y/N)_0.0,1.0,-0.07713485,negative
+374,Fast food (Y/N)_1.0,0.0,0.0,positive
+386,Age (yrs),1.8027829399651198,-0.06936439,negative
+386,Weight (Kg),1.6635548256630808,0.11091524,positive
+386,BMI,1.0270456921270672,0.07429655,positive
+386,Cycle length(days),-1.4195518841139434,0.053096436,positive
+386,FSH(mIU/mL),0.7955003119378848,-0.18146461,negative
+386,Follicle No. (L),-0.4757883393697924,-0.28797492,negative
+386,Follicle No. (R),-0.9963661335821524,-1.4283189,negative
+386,Avg. F size (L) (mm),-0.2920374236262168,-0.14213008,negative
+386,Cycle(R/I)_2,0.0,0.37840262,positive
+386,Cycle(R/I)_4,1.0,0.03556292,positive
+386,Weight gain(Y/N)_0,0.0,0.20778996,positive
+386,Weight gain(Y/N)_1,1.0,0.03762096,positive
+386,hair growth(Y/N)_0,1.0,-0.20807603,negative
+386,hair growth(Y/N)_1,0.0,0.0,positive
+386,Skin darkening (Y/N)_0,0.0,0.15468088,positive
+386,Skin darkening (Y/N)_1,1.0,0.02382788,positive
+386,Pimples(Y/N)_0,1.0,-0.21966685,negative
+386,Pimples(Y/N)_1,0.0,0.0,positive
+386,Fast food (Y/N)_0.0,0.0,0.0126381405,positive
+386,Fast food (Y/N)_1.0,1.0,0.0,positive
+393,Age (yrs),-0.9167466369816473,0.14925869,positive
+393,Weight (Kg),-1.4025089242659294,0.108093925,positive
+393,BMI,-1.6316707143587463,-0.056275066,negative
+393,Cycle length(days),0.05492220962938073,-0.024874542,negative
+393,FSH(mIU/mL),0.2542494656089643,-0.024211632,negative
+393,Follicle No. (L),1.0105587042812945,0.3936368,positive
+393,Follicle No. (R),1.033356972074424,1.2772126,positive
+393,Avg. F size (L) (mm),0.01119888592962917,0.120526515,positive
+393,Cycle(R/I)_2,1.0,-0.1913466,negative
+393,Cycle(R/I)_4,0.0,-0.0009843651,negative
+393,Weight gain(Y/N)_0,1.0,-0.28065255,negative
+393,Weight gain(Y/N)_1,0.0,-0.08452329,negative
+393,hair growth(Y/N)_0,1.0,-0.25473538,negative
+393,hair growth(Y/N)_1,0.0,0.0,positive
+393,Skin darkening (Y/N)_0,0.0,0.25553003,positive
+393,Skin darkening (Y/N)_1,1.0,0.03587697,positive
+393,Pimples(Y/N)_0,1.0,-0.34944344,negative
+393,Pimples(Y/N)_1,0.0,0.0,positive
+393,Fast food (Y/N)_0.0,0.0,0.17257334,positive
+393,Fast food (Y/N)_1.0,1.0,0.0,positive
+402,Age (yrs),-0.7224945243425924,0.26015204,positive
+402,Weight (Kg),0.5774570082901076,-0.090780735,negative
+402,BMI,0.4275312083116385,-0.06264409,negative
+402,Cycle length(days),0.7921592565010428,-0.09828846,negative
+402,FSH(mIU/mL),-0.20967983124439643,-0.06157308,negative
+402,Follicle No. (L),-0.22806383209461129,-0.28056508,negative
+402,Follicle No. (R),-0.31979176502996026,-0.782274,negative
+402,Avg. F size (L) (mm),-0.2920374236262168,-0.097500525,negative
+402,Cycle(R/I)_2,1.0,-0.24050538,negative
+402,Cycle(R/I)_4,0.0,-0.00563082,negative
+402,Weight gain(Y/N)_0,0.0,0.20687386,positive
+402,Weight gain(Y/N)_1,1.0,0.040548116,positive
+402,hair growth(Y/N)_0,1.0,-0.33094764,negative
+402,hair growth(Y/N)_1,0.0,0.0,positive
+402,Skin darkening (Y/N)_0,1.0,-0.16036808,negative
+402,Skin darkening (Y/N)_1,0.0,-0.012544228,negative
+402,Pimples(Y/N)_0,1.0,-0.16571179,negative
+402,Pimples(Y/N)_1,0.0,0.0,positive
+402,Fast food (Y/N)_0.0,0.0,0.07416302,positive
+402,Fast food (Y/N)_1.0,1.0,0.0,positive
+405,Age (yrs),-1.110998749620702,0.12852836,positive
+405,Weight (Kg),-2.0753128819306026,0.054268777,positive
+405,BMI,-1.8141316442156157,-0.20437387,negative
+405,Cycle length(days),0.7921592565010428,-0.09396771,negative
+405,FSH(mIU/mL),-1.040886488106668,0.14080366,positive
+405,Follicle No. (L),-0.4757883393697924,-0.21624804,negative
+405,Follicle No. (R),-0.31979176502996026,-0.629035,negative
+405,Avg. F size (L) (mm),0.9209078145971672,0.16718158,positive
+405,Cycle(R/I)_2,1.0,-0.20498237,negative
+405,Cycle(R/I)_4,0.0,-0.0022248416,negative
+405,Weight gain(Y/N)_0,1.0,-0.08461189,negative
+405,Weight gain(Y/N)_1,0.0,-0.04980364,negative
+405,hair growth(Y/N)_0,1.0,-0.29360738,negative
+405,hair growth(Y/N)_1,0.0,0.0,positive
+405,Skin darkening (Y/N)_0,0.0,0.42217815,positive
+405,Skin darkening (Y/N)_1,1.0,0.08371431,positive
+405,Pimples(Y/N)_0,1.0,-0.17059387,negative
+405,Pimples(Y/N)_1,0.0,0.0,positive
+405,Fast food (Y/N)_0.0,1.0,-0.10511958,negative
+405,Fast food (Y/N)_1.0,0.0,0.0,positive
+407,Age (yrs),0.24876603885268156,-0.030678345,negative
+407,Weight (Kg),-1.4025089242659294,0.062039457,positive
+407,BMI,-0.5108392880951188,-0.15788332,negative
+407,Cycle length(days),0.7921592565010428,-0.06222689,negative
+407,FSH(mIU/mL),-1.2003621839000107,0.09404655,positive
+407,Follicle No. (L),-1.218961861195336,-0.2527353,negative
+407,Follicle No. (R),-0.770841344064755,-1.0212278,negative
+407,Avg. F size (L) (mm),0.6176715050413212,0.055277538,positive
+407,Cycle(R/I)_2,1.0,-0.1457848,negative
+407,Cycle(R/I)_4,0.0,-0.00563082,negative
+407,Weight gain(Y/N)_0,1.0,-0.12824407,negative
+407,Weight gain(Y/N)_1,0.0,0.0047393516,positive
+407,hair growth(Y/N)_0,1.0,-0.25037244,negative
+407,hair growth(Y/N)_1,0.0,0.0,positive
+407,Skin darkening (Y/N)_0,1.0,-0.15145625,negative
+407,Skin darkening (Y/N)_1,0.0,-0.030381534,negative
+407,Pimples(Y/N)_0,1.0,-0.10864045,negative
+407,Pimples(Y/N)_1,0.0,0.0,positive
+407,Fast food (Y/N)_0.0,0.0,0.056964576,positive
+407,Fast food (Y/N)_1.0,1.0,0.0,positive
+431,Age (yrs),-1.3052508622597567,0.005250814,positive
+431,Weight (Kg),0.5197880976331362,-0.07981293,negative
+431,BMI,0.8185189151477876,-0.02458272,negative
+431,Cycle length(days),-1.4195518841139434,0.11200906,positive
+431,FSH(mIU/mL),-0.13719087861105908,-0.10785012,negative
+431,Follicle No. (L),-0.4757883393697924,-0.2329221,negative
+431,Follicle No. (R),-0.09426697551256286,-0.5040412,negative
+431,Avg. F size (L) (mm),-0.5952737331820628,-0.15877849,negative
+431,Cycle(R/I)_2,0.0,0.70767874,positive
+431,Cycle(R/I)_4,1.0,0.03556292,positive
+431,Weight gain(Y/N)_0,0.0,0.23295596,positive
+431,Weight gain(Y/N)_1,1.0,0.041199528,positive
+431,hair growth(Y/N)_0,1.0,-0.19242273,negative
+431,hair growth(Y/N)_1,0.0,0.0,positive
+431,Skin darkening (Y/N)_0,0.0,0.28575465,positive
+431,Skin darkening (Y/N)_1,1.0,0.050212815,positive
+431,Pimples(Y/N)_0,1.0,-0.20312701,negative
+431,Pimples(Y/N)_1,0.0,0.0,positive
+431,Fast food (Y/N)_0.0,1.0,-0.06396242,negative
+431,Fast food (Y/N)_1.0,0.0,0.0,positive
+434,Age (yrs),0.24876603885268156,-0.032657143,negative
+434,Weight (Kg),-0.24913071112649013,-0.05500237,negative
+434,BMI,-0.7193660650743985,-0.118613906,negative
+434,Cycle length(days),0.7921592565010428,-0.12065166,negative
+434,FSH(mIU/mL),-0.3788207207221845,0.008200161,positive
+434,Follicle No. (L),-0.22806383209461129,-0.3174134,negative
+434,Follicle No. (R),0.13125781400483452,-0.43696097,negative
+434,Avg. F size (L) (mm),-0.5952737331820628,-0.22324921,negative
+434,Cycle(R/I)_2,1.0,-0.19852099,negative
+434,Cycle(R/I)_4,0.0,-0.00563082,negative
+434,Weight gain(Y/N)_0,1.0,-0.10859993,negative
+434,Weight gain(Y/N)_1,0.0,-0.0711769,negative
+434,hair growth(Y/N)_0,1.0,-0.36528847,negative
+434,hair growth(Y/N)_1,0.0,0.0,positive
+434,Skin darkening (Y/N)_0,1.0,-0.16885695,negative
+434,Skin darkening (Y/N)_1,0.0,-0.02946333,negative
+434,Pimples(Y/N)_0,0.0,0.13467956,positive
+434,Pimples(Y/N)_1,1.0,0.0,positive
+434,Fast food (Y/N)_0.0,0.0,0.05160395,positive
+434,Fast food (Y/N)_1.0,1.0,0.0,positive
+435,Age (yrs),-1.6937550875378664,0.0592376,positive
+435,Weight (Kg),1.0003623531079024,-0.021474436,negative
+435,BMI,0.9749139978822476,-0.028413888,negative
+435,Cycle length(days),0.05492220962938073,-0.020140167,negative
+435,FSH(mIU/mL),-0.18068425019106157,-0.017215647,negative
+435,Follicle No. (L),0.5151096897309322,0.11162621,positive
+435,Follicle No. (R),1.033356972074424,1.6518137,positive
+435,Avg. F size (L) (mm),-0.2920374236262168,-0.11913371,negative
+435,Cycle(R/I)_2,1.0,-0.16180627,negative
+435,Cycle(R/I)_4,0.0,-0.0015494553,negative
+435,Weight gain(Y/N)_0,0.0,0.41662082,positive
+435,Weight gain(Y/N)_1,1.0,0.1252349,positive
+435,hair growth(Y/N)_0,1.0,-0.29111966,negative
+435,hair growth(Y/N)_1,0.0,0.0,positive
+435,Skin darkening (Y/N)_0,0.0,0.41935438,positive
+435,Skin darkening (Y/N)_1,1.0,0.07666285,positive
+435,Pimples(Y/N)_0,0.0,0.18020578,positive
+435,Pimples(Y/N)_1,1.0,0.0,positive
+435,Fast food (Y/N)_0.0,0.0,0.09934394,positive
+435,Fast food (Y/N)_1.0,1.0,0.0,positive
+447,Age (yrs),-0.5282424117035376,0.1678954,positive
+447,Weight (Kg),0.32755839544322957,-0.059142035,negative
+447,BMI,-0.06771988701414997,0.047697023,positive
+447,Cycle length(days),0.05492220962938073,-0.012294557,negative
+447,FSH(mIU/mL),-1.3936660575889108,0.38142014,positive
+447,Follicle No. (L),0.01966067518056986,0.11271198,positive
+447,Follicle No. (R),0.13125781400483452,-0.33349827,negative
+447,Avg. F size (L) (mm),0.9209078145971672,0.0738918,positive
+447,Cycle(R/I)_2,1.0,-0.10167478,negative
+447,Cycle(R/I)_4,0.0,-0.0009545272,negative
+447,Weight gain(Y/N)_0,1.0,-0.1862996,negative
+447,Weight gain(Y/N)_1,0.0,-0.03959539,negative
+447,hair growth(Y/N)_0,0.0,0.9599881,positive
+447,hair growth(Y/N)_1,1.0,0.0,positive
+447,Skin darkening (Y/N)_0,0.0,0.4540259,positive
+447,Skin darkening (Y/N)_1,1.0,0.06802933,positive
+447,Pimples(Y/N)_0,1.0,-0.21318945,negative
+447,Pimples(Y/N)_1,0.0,0.0,positive
+447,Fast food (Y/N)_0.0,0.0,0.15932864,positive
+447,Fast food (Y/N)_1.0,1.0,0.0,positive
+451,Age (yrs),0.44301815149173635,-0.012670552,negative
+451,Weight (Kg),0.9042475020129492,-0.030707866,negative
+451,BMI,0.08867519572031003,-0.035360724,negative
+451,Cycle length(days),0.05492220962938073,0.035415377,positive
+451,FSH(mIU/mL),-0.3884859144066293,0.025586104,positive
+451,Follicle No. (L),2.4969057479323813,0.54904276,positive
+451,Follicle No. (R),2.160980919661411,1.4275202,positive
+451,Avg. F size (L) (mm),0.9209078145971672,0.2162167,positive
+451,Cycle(R/I)_2,1.0,-0.12283508,negative
+451,Cycle(R/I)_4,0.0,-0.0009545272,negative
+451,Weight gain(Y/N)_0,0.0,0.28665552,positive
+451,Weight gain(Y/N)_1,1.0,0.11092153,positive
+451,hair growth(Y/N)_0,0.0,0.30564523,positive
+451,hair growth(Y/N)_1,1.0,0.0,positive
+451,Skin darkening (Y/N)_0,1.0,-0.15751106,negative
+451,Skin darkening (Y/N)_1,0.0,-0.012467055,negative
+451,Pimples(Y/N)_0,0.0,0.12282654,positive
+451,Pimples(Y/N)_1,1.0,0.0,positive
+451,Fast food (Y/N)_0.0,0.0,0.11725843,positive
+451,Fast food (Y/N)_1.0,1.0,0.0,positive
+455,Age (yrs),0.6372702641307911,-0.18888687,negative
+455,Weight (Kg),0.135328693253323,-0.13259497,negative
+455,BMI,0.03654350147548942,0.057581402,positive
+455,Cycle length(days),0.05492220962938073,0.012249251,positive
+455,FSH(mIU/mL),-0.5624594007266397,0.045650907,positive
+455,Follicle No. (L),1.5060077188316567,0.6111991,positive
+455,Follicle No. (R),1.4844065511092188,1.6234094,positive
+455,Avg. F size (L) (mm),1.224144124153013,0.24404252,positive
+455,Cycle(R/I)_2,1.0,-0.11218159,negative
+455,Cycle(R/I)_4,0.0,-0.0015494553,negative
+455,Weight gain(Y/N)_0,1.0,-0.3540439,negative
+455,Weight gain(Y/N)_1,0.0,-0.06765827,negative
+455,hair growth(Y/N)_0,1.0,-0.13651986,negative
+455,hair growth(Y/N)_1,0.0,0.0,positive
+455,Skin darkening (Y/N)_0,0.0,0.15222614,positive
+455,Skin darkening (Y/N)_1,1.0,0.03463532,positive
+455,Pimples(Y/N)_0,0.0,0.19965957,positive
+455,Pimples(Y/N)_1,1.0,0.0,positive
+455,Fast food (Y/N)_0.0,0.0,0.14113829,positive
+455,Fast food (Y/N)_1.0,1.0,0.0,positive
+461,Age (yrs),-0.9167466369816473,0.21882166,positive
+461,Weight (Kg),0.32755839544322957,-0.07692358,negative
+461,BMI,0.2450702784547691,0.024818446,positive
+461,Cycle length(days),-0.6823148372422814,0.10221767,positive
+461,FSH(mIU/mL),1.4623986761645913,-0.0970576,negative
+461,Follicle No. (L),-0.22806383209461129,-0.25513273,negative
+461,Follicle No. (R),0.3567826035222319,0.30146852,positive
+461,Avg. F size (L) (mm),0.9209078145971672,0.25746903,positive
+461,Cycle(R/I)_2,1.0,-0.2690936,negative
+461,Cycle(R/I)_4,0.0,-0.00563082,negative
+461,Weight gain(Y/N)_0,1.0,-0.19155371,negative
+461,Weight gain(Y/N)_1,0.0,-0.04250442,negative
+461,hair growth(Y/N)_0,1.0,-0.34084,negative
+461,hair growth(Y/N)_1,0.0,0.0,positive
+461,Skin darkening (Y/N)_0,1.0,-0.16865095,negative
+461,Skin darkening (Y/N)_1,0.0,-0.05515557,negative
+461,Pimples(Y/N)_0,1.0,-0.17333625,negative
+461,Pimples(Y/N)_1,0.0,0.0,positive
+461,Fast food (Y/N)_0.0,0.0,0.1545377,positive
+461,Fast food (Y/N)_1.0,1.0,0.0,positive
+467,Age (yrs),0.6372702641307911,-0.1223803,negative
+467,Weight (Kg),0.21222057412928536,-0.17998458,negative
+467,BMI,0.5578604439236882,-0.15768792,negative
+467,Cycle length(days),-0.6823148372422814,0.052745815,positive
+467,FSH(mIU/mL),0.9066500393090027,-0.060193636,negative
+467,Follicle No. (L),1.2582832115564755,0.40633118,positive
+467,Follicle No. (R),0.5823073930396293,0.49262348,positive
+467,Avg. F size (L) (mm),1.8306167432647051,0.09681588,positive
+467,Cycle(R/I)_2,1.0,-0.29516226,negative
+467,Cycle(R/I)_4,0.0,-0.0015494553,negative
+467,Weight gain(Y/N)_0,1.0,-0.47438702,negative
+467,Weight gain(Y/N)_1,0.0,-0.09026377,negative
+467,hair growth(Y/N)_0,1.0,-0.2710874,negative
+467,hair growth(Y/N)_1,0.0,0.0,positive
+467,Skin darkening (Y/N)_0,1.0,-0.14476532,negative
+467,Skin darkening (Y/N)_1,0.0,-0.019942295,negative
+467,Pimples(Y/N)_0,1.0,-0.36787385,negative
+467,Pimples(Y/N)_1,0.0,0.0,positive
+467,Fast food (Y/N)_0.0,0.0,0.19979048,positive
+467,Fast food (Y/N)_1.0,1.0,0.0,positive
+475,Age (yrs),2.4302172637892703,-0.081224404,negative
+475,Weight (Kg),-0.4413604133163967,0.11606135,positive
+475,BMI,-0.04165403989173966,0.023793556,positive
+475,Cycle length(days),-2.1567889309856056,0.1062793,positive
+475,FSH(mIU/mL),-0.38365331756440685,0.10804968,positive
+475,Follicle No. (L),0.7628341970061133,0.09153194,positive
+475,Follicle No. (R),0.8078321825570267,0.9828441,positive
+475,Avg. F size (L) (mm),0.9209078145971672,0.36682436,positive
+475,Cycle(R/I)_2,0.0,0.58803755,positive
+475,Cycle(R/I)_4,1.0,0.009785991,positive
+475,Weight gain(Y/N)_0,1.0,-0.27212736,negative
+475,Weight gain(Y/N)_1,0.0,-0.09913017,negative
+475,hair growth(Y/N)_0,1.0,-0.16296822,negative
+475,hair growth(Y/N)_1,0.0,0.0,positive
+475,Skin darkening (Y/N)_0,1.0,-0.13684064,negative
+475,Skin darkening (Y/N)_1,0.0,-0.057058405,negative
+475,Pimples(Y/N)_0,0.0,0.338454,positive
+475,Pimples(Y/N)_1,1.0,0.0,positive
+475,Fast food (Y/N)_0.0,1.0,-0.06632539,negative
+475,Fast food (Y/N)_1.0,0.0,0.0,positive
+494,Age (yrs),-0.33399029906448285,0.039154872,positive
+494,Weight (Kg),-0.921934668791163,0.23065194,positive
+494,BMI,-0.8236294535640378,-0.02263727,negative
+494,Cycle length(days),-0.6823148372422814,0.076690525,positive
+494,FSH(mIU/mL),1.3802445298468087,-0.0744783,negative
+494,Follicle No. (L),0.7628341970061133,-0.00827741,negative
+494,Follicle No. (R),2.8375552882136033,1.9088291,positive
+494,Avg. F size (L) (mm),1.224144124153013,0.311363,positive
+494,Cycle(R/I)_2,1.0,-0.08863736,negative
+494,Cycle(R/I)_4,0.0,-0.0015494553,negative
+494,Weight gain(Y/N)_0,1.0,-0.23466325,negative
+494,Weight gain(Y/N)_1,0.0,-0.06405498,negative
+494,hair growth(Y/N)_0,1.0,-0.1631858,negative
+494,hair growth(Y/N)_1,0.0,0.0,positive
+494,Skin darkening (Y/N)_0,1.0,-0.075551786,negative
+494,Skin darkening (Y/N)_1,0.0,-0.057547953,negative
+494,Pimples(Y/N)_0,1.0,-0.25992554,negative
+494,Pimples(Y/N)_1,0.0,0.0,positive
+494,Fast food (Y/N)_0.0,1.0,-0.14739886,negative
+494,Fast food (Y/N)_1.0,0.0,0.0,positive
+495,Age (yrs),-0.33399029906448285,-0.06524667,negative
+495,Weight (Kg),-1.1141643709810696,0.04220476,positive
+495,BMI,-0.615102676584759,-0.05372012,negative
+495,Cycle length(days),0.05492220962938073,-0.0876165,negative
+495,FSH(mIU/mL),-1.1761991996888983,0.11901559,positive
+495,Follicle No. (L),-0.22806383209461129,-0.3910408,negative
+495,Follicle No. (R),0.3567826035222319,0.36631262,positive
+495,Avg. F size (L) (mm),0.9209078145971672,0.19762552,positive
+495,Cycle(R/I)_2,1.0,-0.34644976,negative
+495,Cycle(R/I)_4,0.0,-0.00563082,negative
+495,Weight gain(Y/N)_0,0.0,0.16061111,positive
+495,Weight gain(Y/N)_1,1.0,0.09012471,positive
+495,hair growth(Y/N)_0,1.0,-0.41103414,negative
+495,hair growth(Y/N)_1,0.0,0.0,positive
+495,Skin darkening (Y/N)_0,0.0,0.32325786,positive
+495,Skin darkening (Y/N)_1,1.0,0.08026249,positive
+495,Pimples(Y/N)_0,0.0,0.1713478,positive
+495,Pimples(Y/N)_1,1.0,0.0,positive
+495,Fast food (Y/N)_0.0,0.0,0.059032246,positive
+495,Fast food (Y/N)_1.0,1.0,0.0,positive
+498,Age (yrs),0.6372702641307911,-0.073456444,negative
+498,Weight (Kg),-0.53747526441135,-0.047995985,negative
+498,BMI,0.8706506093926082,-0.06726195,negative
+498,Cycle length(days),0.05492220962938073,-0.012954313,negative
+498,FSH(mIU/mL),-0.12269308808439143,-0.11229084,negative
+498,Follicle No. (L),0.7628341970061133,0.068143025,positive
+498,Follicle No. (R),0.13125781400483452,-0.53999096,negative
+498,Avg. F size (L) (mm),1.5273804337088592,0.14418983,positive
+498,Cycle(R/I)_2,1.0,-0.28602648,negative
+498,Cycle(R/I)_4,0.0,-0.0015494553,negative
+498,Weight gain(Y/N)_0,1.0,-0.13657549,negative
+498,Weight gain(Y/N)_1,0.0,-0.10443959,negative
+498,hair growth(Y/N)_0,1.0,-0.28599992,negative
+498,hair growth(Y/N)_1,0.0,0.0,positive
+498,Skin darkening (Y/N)_0,1.0,-0.119526245,negative
+498,Skin darkening (Y/N)_1,0.0,-0.033062547,negative
+498,Pimples(Y/N)_0,0.0,0.23770618,positive
+498,Pimples(Y/N)_1,1.0,0.0,positive
+498,Fast food (Y/N)_0.0,1.0,-0.0646008,negative
+498,Fast food (Y/N)_1.0,0.0,0.0,positive
+518,Age (yrs),-0.9167466369816473,0.19917245,positive
+518,Weight (Kg),-0.05690100893658356,-0.13987917,negative
+518,BMI,0.2450702784547691,0.0034105782,positive
+518,Cycle length(days),0.05492220962938073,-0.036984794,negative
+518,FSH(mIU/mL),0.5200422919312021,-0.0945055,negative
+518,Follicle No. (L),-0.22806383209461129,-0.24616104,negative
+518,Follicle No. (R),0.3567826035222319,0.17148533,positive
+518,Avg. F size (L) (mm),1.5273804337088592,0.14033312,positive
+518,Cycle(R/I)_2,1.0,-0.29323775,negative
+518,Cycle(R/I)_4,0.0,-0.00563082,negative
+518,Weight gain(Y/N)_0,1.0,-0.2037336,negative
+518,Weight gain(Y/N)_1,0.0,-0.070003584,negative
+518,hair growth(Y/N)_0,1.0,-0.32454827,negative
+518,hair growth(Y/N)_1,0.0,0.0,positive
+518,Skin darkening (Y/N)_0,1.0,-0.12712605,negative
+518,Skin darkening (Y/N)_1,0.0,-0.033062547,negative
+518,Pimples(Y/N)_0,1.0,-0.2379882,negative
+518,Pimples(Y/N)_1,0.0,0.0,positive
+518,Fast food (Y/N)_0.0,1.0,-0.25955454,negative
+518,Fast food (Y/N)_1.0,0.0,0.0,positive
+528,Age (yrs),-1.8880072001769213,0.061054263,positive
+528,Weight (Kg),0.2314435443482763,-0.18351485,negative
+528,BMI,-0.17198327550378936,0.009290034,positive
+528,Cycle length(days),-0.6823148372422814,0.10864684,positive
+528,FSH(mIU/mL),-0.24834060598217653,0.057578012,positive
+528,Follicle No. (L),1.0105587042812945,0.48641238,positive
+528,Follicle No. (R),0.5823073930396293,0.5938331,positive
+528,Avg. F size (L) (mm),1.8306167432647051,0.18768778,positive
+528,Cycle(R/I)_2,1.0,-0.30723077,negative
+528,Cycle(R/I)_4,0.0,-0.0015494553,negative
+528,Weight gain(Y/N)_0,1.0,-0.3661214,negative
+528,Weight gain(Y/N)_1,0.0,-0.07254743,negative
+528,hair growth(Y/N)_0,1.0,-0.2176556,negative
+528,hair growth(Y/N)_1,0.0,0.0,positive
+528,Skin darkening (Y/N)_0,1.0,-0.10890096,negative
+528,Skin darkening (Y/N)_1,0.0,-0.020983335,negative
+528,Pimples(Y/N)_0,0.0,0.3577581,positive
+528,Pimples(Y/N)_1,1.0,0.0,positive
+528,Fast food (Y/N)_0.0,1.0,-0.21282226,negative
+528,Fast food (Y/N)_1.0,0.0,0.0,positive
+535,Age (yrs),-1.4995029748988116,0.047073476,positive
+535,Weight (Kg),-1.1141643709810696,0.13733633,positive
+535,BMI,-1.3449463960122365,-0.15006942,negative
+535,Cycle length(days),0.05492220962938073,-0.030218583,negative
+535,FSH(mIU/mL),-0.547961610199972,0.13971107,positive
+535,Follicle No. (L),0.267385182455751,0.100082345,positive
+535,Follicle No. (R),0.13125781400483452,-0.51806194,negative
+535,Avg. F size (L) (mm),1.5273804337088592,0.14053465,positive
+535,Cycle(R/I)_2,1.0,-0.2505237,negative
+535,Cycle(R/I)_4,0.0,-0.0015494553,negative
+535,Weight gain(Y/N)_0,1.0,-0.098147616,negative
+535,Weight gain(Y/N)_1,0.0,-0.08942932,negative
+535,hair growth(Y/N)_0,1.0,-0.26571202,negative
+535,hair growth(Y/N)_1,0.0,0.0,positive
+535,Skin darkening (Y/N)_0,1.0,-0.110024534,negative
+535,Skin darkening (Y/N)_1,0.0,-0.032573,negative
+535,Pimples(Y/N)_0,1.0,-0.29808164,negative
+535,Pimples(Y/N)_1,0.0,0.0,positive
+535,Fast food (Y/N)_0.0,1.0,-0.107663214,negative
+535,Fast food (Y/N)_1.0,0.0,0.0,positive
+539,Age (yrs),0.831522376769846,-0.12745786,negative
+539,Weight (Kg),-0.53747526441135,-0.055240832,negative
+539,BMI,-0.22411496974860998,-0.025287805,negative
+539,Cycle length(days),0.7921592565010428,-0.053607456,negative
+539,FSH(mIU/mL),2.5861320850802763,-0.08304946,negative
+539,Follicle No. (L),-1.218961861195336,-0.21555959,negative
+539,Follicle No. (R),-1.4474157126169471,-0.79140383,negative
+539,Avg. F size (L) (mm),0.9209078145971672,0.17517202,positive
+539,Cycle(R/I)_2,1.0,-0.116901085,negative
+539,Cycle(R/I)_4,0.0,-0.00563082,negative
+539,Weight gain(Y/N)_0,1.0,-0.11396265,negative
+539,Weight gain(Y/N)_1,0.0,-0.051811755,negative
+539,hair growth(Y/N)_0,1.0,-0.11838316,negative
+539,hair growth(Y/N)_1,0.0,0.0,positive
+539,Skin darkening (Y/N)_0,1.0,-0.07383625,negative
+539,Skin darkening (Y/N)_1,0.0,-0.0093804225,negative
+539,Pimples(Y/N)_0,1.0,-0.1382841,negative
+539,Pimples(Y/N)_1,0.0,0.0,positive
+539,Fast food (Y/N)_0.0,1.0,-0.11017684,negative
+539,Fast food (Y/N)_1.0,0.0,0.0,positive
+541,Age (yrs),-1.6937550875378664,0.04357361,positive
+541,Weight (Kg),2.153740566247342,-0.037102737,negative
+541,BMI,1.5222967874528568,0.070325606,positive
+541,Cycle length(days),1.529396303372705,-0.07063499,negative
+541,FSH(mIU/mL),-0.4271466891444094,0.030890042,positive
+541,Follicle No. (L),0.7628341970061133,0.12160067,positive
+541,Follicle No. (R),0.8078321825570267,0.9287615,positive
+541,Avg. F size (L) (mm),1.224144124153013,-0.07900428,negative
+541,Cycle(R/I)_2,0.0,0.2506429,positive
+541,Cycle(R/I)_4,1.0,0.0044343187,positive
+541,Weight gain(Y/N)_0,0.0,0.325105,positive
+541,Weight gain(Y/N)_1,1.0,0.1198964,positive
+541,hair growth(Y/N)_0,0.0,0.53002,positive
+541,hair growth(Y/N)_1,1.0,0.0,positive
+541,Skin darkening (Y/N)_0,0.0,0.21449941,positive
+541,Skin darkening (Y/N)_1,1.0,0.056036897,positive
+541,Pimples(Y/N)_0,0.0,0.17365673,positive
+541,Pimples(Y/N)_1,1.0,0.0,positive
+541,Fast food (Y/N)_0.0,0.0,0.100104,positive
+541,Fast food (Y/N)_1.0,1.0,0.0,positive

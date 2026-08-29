@@ -1,0 +1,2 @@
+test_id,optimizer_used,population_size,generations,number_of_objectives,pareto_solution_count,feasible_solution_count,original_prediction,original_probability,candidate_prediction,candidate_probability,changed_features,objective_values,constraint_valid,runtime_seconds,error,validation_type
+synthetic_patient_27,NSGA-II,10,2,6,2,1,0,0.0,1,1.0,Weight (Kg),"(0.0, 6.51768440065306, 1.0, 0.0, 0.0, 0.0)",True,0.009519100014586002,,SOFTWARE RUNTIME VALIDATION ONLY - NOT RESEARCH RESULTS

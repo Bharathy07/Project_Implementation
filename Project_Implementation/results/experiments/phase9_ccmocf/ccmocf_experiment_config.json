@@ -1,0 +1,12 @@
+{
+  "phase": 9,
+  "model_name": "xgboost",
+  "population_size": 64,
+  "generations": 20,
+  "seed": 42,
+  "top_k": 3,
+  "direction_policy": "predicted PCOS: 1->0; predicted non-PCOS: 0->1",
+  "test_set_only": true,
+  "models_retrained": false,
+  "optimizer_used": "NSGA-II"
+}

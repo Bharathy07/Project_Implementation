@@ -1,0 +1,21 @@
+feature,mean_abs_shap
+Follicle No. (R),0.880327
+hair growth(Y/N)_0,0.32003006
+Follicle No. (L),0.28321347
+Cycle(R/I)_2,0.26153338
+Weight gain(Y/N)_0,0.251213
+Skin darkening (Y/N)_0,0.19565806
+Pimples(Y/N)_0,0.19317536
+Avg. F size (L) (mm),0.13390702
+Fast food (Y/N)_0.0,0.10929653
+FSH(mIU/mL),0.090916164
+Age (yrs),0.08809589
+Weight (Kg),0.0869824
+BMI,0.08366782
+Weight gain(Y/N)_1,0.06731696
+Cycle length(days),0.058909427
+Skin darkening (Y/N)_1,0.038130276
+Cycle(R/I)_4,0.006985127
+hair growth(Y/N)_1,0.0
+Pimples(Y/N)_1,0.0
+Fast food (Y/N)_1.0,0.0

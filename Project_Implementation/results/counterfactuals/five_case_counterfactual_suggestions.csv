@@ -1,0 +1,6 @@
+Case,PatientID,OriginalPrediction,OriginalProbability,CounterfactualID,CounterfactualPrediction,CounterfactualProbability,ProbabilityChange,ChangedFeatures,OriginalValues,CounterfactualValues,Sparsity,Proximity,Plausibility,Diversity,ConstraintSatisfaction,DependencyConsistency
+Case 1,248,1,0.9223580956459044,,,,,,{},{},,,,,NO_VALID_CANDIDATE,NOT_APPLICABLE
+Case 2,451,1,0.8918277025222778,,,,,,{},{},,,,,NO_VALID_CANDIDATE,NOT_APPLICABLE
+Case 3,27,1,0.895735502243042,,,,,,{},{},,,,,NO_VALID_CANDIDATE,NOT_APPLICABLE
+Case 4,169,1,0.9075535535812378,,,,,,{},{},,,,,NO_VALID_CANDIDATE,NOT_APPLICABLE
+Case 5,324,1,0.9054586291313172,,,,,,{},{},,,,,NO_VALID_CANDIDATE,NOT_APPLICABLE
