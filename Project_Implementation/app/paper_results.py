@@ -85,6 +85,14 @@ def package_version(package: str) -> str:
         return "not installed"
 
 
+def dataset_record_count(frame: pd.DataFrame) -> int | str:
+    """Return the record total when the dataset statistics were generated."""
+    if not {"Statistic", "Value"}.issubset(frame.columns):
+        return "N/A"
+    values = frame.loc[frame["Statistic"].eq("Records"), "Value"]
+    return values.iloc[0] if not values.empty else "N/A"
+
+
 def _text_table(frame: pd.DataFrame) -> str:
     return frame.to_csv(index=False) if not frame.empty else "No actual output was generated."
 
@@ -108,7 +116,13 @@ def main():
     st.title("Explainable PMOS Prediction Through Clinically Constrained Multi-Objective Counterfactual Optimization")
     metrics=read_csv(TABLES/"classification_metrics.csv"); five=read_csv(CF/"five_profiles_summary.csv"); dice=read_csv(CF/"dice_results.csv"); comparison=read_csv(TABLES/"dice_vs_ccmocf.csv")
     st.header("1. Experiment Overview")
-    ds=dataset_stats(); splits={n:len(read_csv(RESULTS/"splits"/f"{n}_patient_ids.csv")) for n in ("train","validation","test")}; c1,c2,c3,c4=st.columns(4); c1.metric("Records",ds.loc[ds.Statistic.eq("Records"),"Value"].iloc[0] if not ds.empty else "N/A"); c2.metric("Train",splits["train"]); c3.metric("Validation",splits["validation"]); c4.metric("Test",splits["test"])
+    ds = dataset_stats()
+    splits = {n: len(read_csv(RESULTS / "splits" / f"{n}_patient_ids.csv")) for n in ("train", "validation", "test")}
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Records", dataset_record_count(ds))
+    c2.metric("Train", splits["train"])
+    c3.metric("Validation", splits["validation"])
+    c4.metric("Test", splits["test"])
     st.write("Algorithms: XGBoost, LightGBM, Hybrid Ensemble, TreeSHAP, DiCE, CC-MO-CF, NSGA-II")
     st.caption(f"Python {platform.python_version()} · NumPy {package_version('numpy')} · pandas {pd.__version__} · pymoo {package_version('pymoo')}")
     st.header("2. Dataset Results"); st.dataframe(ds, use_container_width=True)
