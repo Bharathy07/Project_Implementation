@@ -93,6 +93,29 @@ def dataset_record_count(frame: pd.DataFrame) -> int | str:
     return values.iloc[0] if not values.empty else "N/A"
 
 
+def patient_record(patient_id: int) -> pd.DataFrame:
+    """Load one patient's recorded details using the source dataset identifier."""
+    try:
+        dataset = pd.read_excel(
+            ROOT / "PCOS_data_without_infertility.xlsx",
+            sheet_name="Full_new",
+            engine="openpyxl",
+        )
+        patient_numbers = pd.to_numeric(dataset["Patient File No."], errors="coerce")
+        return dataset.loc[patient_numbers.eq(patient_id)].copy()
+    except Exception:
+        return pd.DataFrame()
+
+
+def saved_patient_prediction(patient_id: int) -> pd.DataFrame:
+    """Return the saved held-out prediction, without recalculating a model."""
+    predictions = read_csv(RESULTS / "predictions.csv")
+    if "PatientID" not in predictions.columns:
+        return pd.DataFrame()
+    prediction_ids = pd.to_numeric(predictions["PatientID"], errors="coerce")
+    return predictions.loc[prediction_ids.eq(patient_id)].copy()
+
+
 def _text_table(frame: pd.DataFrame) -> str:
     return frame.to_csv(index=False) if not frame.empty else "No actual output was generated."
 
@@ -171,6 +194,39 @@ def main():
     st.header("18. Paper-Ready Results Summary")
     final=metrics[metrics.Model.eq("Hybrid Ensemble")].iloc[0] if not metrics.empty else pd.Series(dtype=object); st.write({k:final.get(k,"N/A") for k in ["Model","Accuracy","Precision","Recall","F1-score","ROC-AUC","MCC","Balanced Accuracy"]}); st.write({"Profiles analyzed":len(five),"Feasible CC-MO-CF":int(five.get("NumberOfCounterfactuals",pd.Series(dtype=float)).sum()) if not five.empty else 0})
     md,hp=export_results(); st.header("19. Export"); st.download_button("Download final_paper_results.md",md.read_text(encoding="utf-8"),"final_paper_results.md"); st.download_button("Download final_paper_results.html",hp.read_text(encoding="utf-8"),"final_paper_results.html")
+    st.header("20. Patient Lookup")
+    st.caption("Enter a Patient File No. to view the recorded details and any saved held-out prediction.")
+    patient_number = st.text_input("Patient number", placeholder="For example: 248")
+    if patient_number.strip():
+        try:
+            patient_id = int(patient_number.strip())
+            if patient_id < 1:
+                raise ValueError
+        except ValueError:
+            st.warning("Enter a positive whole-number patient ID.")
+        else:
+            record = patient_record(patient_id)
+            if record.empty:
+                st.warning(f"No patient details were found for Patient File No. {patient_id}.")
+            else:
+                st.subheader(f"Patient {patient_id} details")
+                ignored_columns = [column for column in record.columns if str(column).startswith("Unnamed:")]
+                details = record.drop(columns=["Sl. No.", *ignored_columns], errors="ignore").rename(columns=lambda column: str(column).strip())
+                details_table = details.iloc[0].rename_axis("Patient detail").reset_index(name="Value")
+                st.dataframe(details_table, use_container_width=True, hide_index=True)
+
+                prediction = saved_patient_prediction(patient_id)
+                if prediction.empty:
+                    st.info("No saved prediction is available for this patient. Saved predictions are available for the held-out test patients only.")
+                else:
+                    output = prediction.iloc[0]
+                    predicted_label = "PCOS" if int(output["HybridPrediction"]) == 1 else "No PCOS"
+                    probability = float(output["HybridProbability"])
+                    c1, c2, c3 = st.columns(3)
+                    c1.metric("Hybrid Ensemble output", predicted_label)
+                    c2.metric("PCOS probability", f"{probability:.1%}")
+                    c3.metric("Recorded label", "PCOS" if int(output["ActualLabel"]) == 1 else "No PCOS")
+                    st.dataframe(prediction, use_container_width=True, hide_index=True)
 
 
 def show_images(st, names):
