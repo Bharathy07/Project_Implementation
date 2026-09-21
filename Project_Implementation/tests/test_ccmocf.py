@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 import numpy as np
+import pytest
 from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.core.problem import ElementwiseProblem
 from pymoo.optimize import minimize
@@ -34,14 +35,11 @@ def _engine():
     return ClinicalConstraintEngine(CONFIG)
 
 
-def test_ccmocf_preserves_immutable_and_patient_id():
+def test_ccmocf_rejects_immutable_and_patient_id_changes():
     engine = _engine()
     current = {"PatientID": 27, "Weight (Kg)": 70.0, "Height(Cm)": 170.0, "BMI": 70 / 1.7**2}
-    projected = engine.project_candidate(current, {**current, "PatientID": 999, "Weight (Kg)": 75.0})
-    assert projected["PatientID"] == 27
-    assert projected["Weight (Kg)"] == 75.0
-    assert abs(projected["BMI"] - 75 / 1.7**2) < 1e-6
-    engine.validate_candidate(current, projected)
+    with pytest.raises(ValueError, match="PatientID.*immutable"):
+        engine.project_candidate(current, {**current, "PatientID": 999, "Weight (Kg)": 75.0})
 
 
 def test_ccmocf_bounds_and_max_step_are_enforced():
@@ -57,6 +55,7 @@ def test_ccmocf_finds_valid_flip_and_reports_nsga_path():
     result = engine.generate({"PatientID": 27, "Weight (Kg)": 70.0}, desired_class=1)
     assert result["optimizer_used"] == "NSGA-II"
     assert result["status"] == "SUCCESS"
+    assert "model_flip_candidates" in result
     assert all(cf.row["PatientID"] == 27 for cf in result["counterfactuals"])
     assert all(cf.row["Weight (Kg)"] < 65.0 for cf in result["counterfactuals"])
 

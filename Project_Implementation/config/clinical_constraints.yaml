@@ -27,6 +27,7 @@ feature:
     type: actionable
     immutable: false
     actionable: true
+    changeable: true
     lower_bound: 30.0
     upper_bound: 200.0
     max_step: 10.0

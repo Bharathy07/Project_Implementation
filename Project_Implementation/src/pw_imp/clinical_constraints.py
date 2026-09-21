@@ -39,11 +39,33 @@ class ClinicalConstraintEngine:
             return {}
         return self.config[feature_name]
 
+    def get_counterfactual_features(self, current_values: Mapping[str, Any] | None = None) -> list[str]:
+        """Return configured features eligible for counterfactual modification."""
+        return [
+            name for name, spec in self.config.items()
+            if bool(spec.get("actionable"))
+            and bool(spec.get("changeable"))
+            and (current_values is None or name in current_values)
+        ]
+
     def _coerce_numeric(self, value):
         try:
             return float(value)
         except (TypeError, ValueError):
             return None
+
+    def _values_equal(self, left: Any, right: Any) -> bool:
+        if left is right:
+            return True
+        try:
+            if bool(left != left) and bool(right != right):
+                return True
+        except (TypeError, ValueError):
+            pass
+        try:
+            return bool(left == right)
+        except (TypeError, ValueError):
+            return False
 
     def _is_binary_like(self, spec: Mapping[str, Any]) -> bool:
         return str(spec.get("type", "")).lower() in {"binary", "categorical"}
@@ -135,14 +157,16 @@ class ClinicalConstraintEngine:
     def validate_feature_change(self, feature_name: str, current_value: Any, proposed_value: Any) -> bool:
         spec = self.get_feature_spec(feature_name)
         if not spec:
+            if proposed_value != current_value:
+                raise ValueError(f"Constraint definition missing for feature '{feature_name}'; it is non-actionable.")
             return True
 
         immutable = bool(spec.get("immutable", False))
-        if immutable and proposed_value != current_value:
+        if immutable and not self._values_equal(proposed_value, current_value):
             raise ValueError(f"Feature '{feature_name}' is immutable and cannot be modified.")
 
         actionable = bool(spec.get("actionable", False))
-        if (not actionable) and proposed_value != current_value and not immutable:
+        if (not actionable) and not self._values_equal(proposed_value, current_value) and not immutable:
             # This guard prevents non-actionable or measurement features from being changed automatically.
             if str(spec.get("type", "")).lower() not in {"binary", "categorical"}:
                 raise ValueError(f"Feature '{feature_name}' is non-actionable and cannot be modified.")
@@ -178,36 +202,163 @@ class ClinicalConstraintEngine:
 
     def validate_candidate(self, current_values: Mapping[str, Any], candidate_values: Mapping[str, Any]) -> Dict[str, Any]:
         merged = dict(current_values)
-        for feature_name, proposed_value in candidate_values.items():
-            self._validate_dependency_consistency(feature_name, current_values, candidate_values)
+        changed = set(self.changed_features(current_values, candidate_values))
+        for feature_name in changed:
+            proposed_value = candidate_values[feature_name]
             if feature_name in current_values:
                 current_value = current_values[feature_name]
             else:
                 current_value = None
-            # Derived values are projections of their parent features, not independent edits.
             spec = self.get_feature_spec(feature_name)
-            if str(spec.get("type", "")).lower() != "derived":
+            if str(spec.get("type", "")).lower() == "derived":
+                self._validate_dependency_consistency(feature_name, current_values, candidate_values)
+            else:
                 self.validate_feature_change(feature_name, current_value, proposed_value)
             merged[feature_name] = proposed_value
+
+        for feature_name, spec in self.config.items():
+            if str(spec.get("type", "")).lower() != "derived" or feature_name not in candidate_values:
+                continue
+            dependencies = set(self._dependency_names_for_feature(feature_name))
+            if feature_name in changed or dependencies.intersection(changed):
+                self._validate_dependency_consistency(feature_name, current_values, candidate_values)
+
+        for feature_name in current_values:
+            if feature_name not in changed:
+                merged[feature_name] = current_values[feature_name]
         return merged
+
+    def immutable_features_unchanged(self, current_values: Mapping[str, Any], candidate_values: Mapping[str, Any]) -> bool:
+        """Return whether every configured immutable value is exactly preserved."""
+        return all(
+            self._values_equal(candidate_values.get(feature_name, current_values.get(feature_name)), current_values.get(feature_name))
+            for feature_name, spec in self.config.items()
+            if spec.get("immutable") and feature_name in current_values
+        )
+
+    def changed_features(self, current_values: Mapping[str, Any], candidate_values: Mapping[str, Any]) -> list[str]:
+        """Return changed fields while preserving NaN equality semantics."""
+        changed = []
+        for feature_name in current_values:
+            current = current_values.get(feature_name)
+            proposed = candidate_values.get(feature_name, current)
+            try:
+                equal = bool((current == proposed) or (current != current and proposed != proposed))
+            except (TypeError, ValueError):
+                equal = current == proposed
+            if not equal:
+                changed.append(feature_name)
+        return changed
+
+    def audit_candidate(self, current_values: Mapping[str, Any], candidate_values: Mapping[str, Any]) -> Dict[str, Any]:
+        """Return candidate-aware constraint failures without projecting the row."""
+        changed = self.changed_features(current_values, candidate_values)
+        failures: list[Dict[str, str]] = []
+
+        for feature_name in candidate_values:
+            if feature_name not in current_values and not self._values_equal(candidate_values[feature_name], None):
+                failures.append({
+                    "constraint": "constraint_definition",
+                    "feature": feature_name,
+                    "reason": f"Feature '{feature_name}' is not present in the original patient.",
+                })
+
+        for feature_name, spec in self.config.items():
+            if not spec.get("immutable") or feature_name not in current_values:
+                continue
+            proposed = candidate_values.get(feature_name, current_values[feature_name])
+            if not self._values_equal(proposed, current_values[feature_name]):
+                failures.append({
+                    "constraint": "immutable",
+                    "feature": feature_name,
+                    "reason": f"Feature '{feature_name}' is immutable and changed.",
+                })
+
+        for feature_name in changed:
+            spec = self.get_feature_spec(feature_name)
+            if not spec:
+                failures.append({
+                    "constraint": "constraint_definition",
+                    "feature": feature_name,
+                    "reason": f"Actionable feature '{feature_name}' has no constraint definition.",
+                })
+                continue
+            if bool(spec.get("immutable")):
+                continue
+            if str(spec.get("type", "")).lower() == "derived":
+                failures.append({
+                    "constraint": "derived_feature_edit",
+                    "feature": feature_name,
+                    "reason": f"Derived feature '{feature_name}' cannot be independently changed.",
+                })
+                continue
+            if not bool(spec.get("actionable", False)):
+                failures.append({
+                    "constraint": "non_actionable",
+                    "feature": feature_name,
+                    "reason": f"Feature '{feature_name}' is non-actionable and changed.",
+                })
+                continue
+            try:
+                self.validate_feature_change(feature_name, current_values.get(feature_name), candidate_values.get(feature_name))
+            except (ValueError, TypeError) as exc:
+                message = str(exc)
+                if "max step" in message:
+                    category = "maximum_change"
+                elif "below lower" in message or "above upper" in message or "out of range" in message:
+                    category = "bounds"
+                elif "may only" in message:
+                    category = "allowed_direction"
+                elif "categorical" in message:
+                    category = "categorical_validity"
+                else:
+                    category = "clinical_constraint"
+                failures.append({"constraint": category, "feature": feature_name, "reason": message})
+
+        changed_set = set(changed)
+        for feature_name, spec in self.config.items():
+            if str(spec.get("type", "")).lower() != "derived" or feature_name not in candidate_values:
+                continue
+            dependencies = set(self._dependency_names_for_feature(feature_name))
+            if feature_name not in changed_set and not dependencies.intersection(changed_set):
+                continue
+            try:
+                self._validate_dependency_consistency(feature_name, current_values, candidate_values)
+            except (ValueError, TypeError) as exc:
+                failures.append({"constraint": "dependency_consistency", "feature": feature_name, "reason": str(exc)})
+
+        return {"valid": not failures, "changed_features": changed, "failures": failures}
 
     def project_candidate(self, current_values: Mapping[str, Any], candidate_values: Mapping[str, Any]) -> Dict[str, Any]:
         projected = dict(current_values)
+        changed = set(self.changed_features(current_values, candidate_values))
         for feature_name, proposed_value in candidate_values.items():
             if feature_name not in current_values:
-                projected[feature_name] = proposed_value
+                if not self._values_equal(proposed_value, current_values.get(feature_name)):
+                    raise ValueError(f"Feature '{feature_name}' is not present in the original patient and cannot be modified.")
                 continue
             current_value = current_values[feature_name]
             spec = self.get_feature_spec(feature_name)
             if not spec:
+                if not self._values_equal(proposed_value, current_value):
+                    raise ValueError(f"Constraint definition missing for feature '{feature_name}'; it is non-actionable.")
                 projected[feature_name] = proposed_value
                 continue
 
             if bool(spec.get("immutable", False)):
+                if not self._values_equal(proposed_value, current_value):
+                    raise ValueError(f"Feature '{feature_name}' is immutable and cannot be modified.")
                 projected[feature_name] = current_value
                 continue
 
-            if not bool(spec.get("actionable", False)) and proposed_value != current_value:
+            if str(spec.get("type", "")).lower() == "derived":
+                projected[feature_name] = current_value
+                continue
+
+            if not bool(spec.get("actionable", False)) and not self._values_equal(proposed_value, current_value):
+                raise ValueError(f"Feature '{feature_name}' is non-actionable and cannot be modified.")
+
+            if self._values_equal(proposed_value, current_value):
                 projected[feature_name] = current_value
                 continue
 
@@ -238,19 +389,23 @@ class ClinicalConstraintEngine:
 
             projected[feature_name] = val
 
-        # Repair dependency-derived features after projection.
-        for feature_name in ["BMI", "FSH/LH", "Waist:Hip Ratio"]:
-            if feature_name in projected:
-                try:
-                    repair_value = self._recompute_derived_value(feature_name, projected)
-                    if repair_value is not None:
-                        projected[feature_name] = repair_value
-                except Exception:
-                    pass
+        # Recalculate only configured derived fields affected by a changed dependency.
+        for feature_name, spec in self.config.items():
+            if str(spec.get("type", "")).lower() != "derived" or feature_name not in projected:
+                continue
+            dependencies = set(self._dependency_names_for_feature(feature_name))
+            if not dependencies.intersection(changed):
+                continue
+            repair_value = self._recompute_derived_value(feature_name, projected)
+            if repair_value is not None:
+                projected[feature_name] = repair_value
 
         # Ensure no inconsistent dependency remains. This may raise if candidate violates the formula.
-        for feature_name in ["BMI", "FSH/LH", "Waist:Hip Ratio"]:
-            if feature_name in candidate_values:
+        for feature_name, spec in self.config.items():
+            if str(spec.get("type", "")).lower() != "derived" or feature_name not in candidate_values:
+                continue
+            dependencies = set(self._dependency_names_for_feature(feature_name))
+            if feature_name in changed or dependencies.intersection(changed):
                 self._validate_dependency_consistency(feature_name, current_values, projected)
 
         return projected

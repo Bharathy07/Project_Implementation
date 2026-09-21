@@ -72,13 +72,14 @@ class _CCMOCFProblem(Problem):
 
     def evaluate_candidate(self, values):
         row = self.candidate_row(values)
-        projected = self.engine.constraints.project_candidate(self.original, row)
-        constraint_valid = True
-        dependency_valid = True
         try:
+            projected = self.engine.constraints.project_candidate(self.original, row)
             self.engine.constraints.validate_candidate(self.original, projected)
         except (ValueError, TypeError):
-            constraint_valid = False
+            invalid = np.full(6, 1.0, dtype=float)
+            return invalid, Candidate(dict(row), 0.0, tuple(invalid.tolist()), [], "INVALID", "INFEASIBLE")
+        constraint_valid = True
+        dependency_valid = True
         if self.engine.use_dependency_consistency:
             for feature_name in ("BMI", "FSH/LH", "Waist:Hip Ratio"):
                 if feature_name in projected and feature_name in self.engine.constraints.config:
@@ -108,13 +109,17 @@ class _CCMOCFProblem(Problem):
         dependency_validity = []
         for candidate_values in values:
             row = self.candidate_row(candidate_values)
-            projected = self.engine.constraints.project_candidate(self.original, row)
-            constraint_valid = True
-            dependency_valid = True
             try:
+                projected = self.engine.constraints.project_candidate(self.original, row)
                 self.engine.constraints.validate_candidate(self.original, projected)
             except (ValueError, TypeError):
-                constraint_valid = False
+                projected = dict(row)
+                validity.append(False)
+                dependency_validity.append(False)
+                projected_rows.append(projected)
+                continue
+            constraint_valid = True
+            dependency_valid = True
             if self.engine.use_dependency_consistency:
                 for feature_name in ("BMI", "FSH/LH", "Waist:Hip Ratio"):
                     if feature_name in projected and feature_name in self.engine.constraints.config:
@@ -207,7 +212,7 @@ class CCMOCF:
         self.optimizer_available = optimizer_available
 
     def _actionable_features(self, original: Mapping[str, Any]) -> list[str]:
-        return [name for name, spec in self.constraints.config.items() if spec.get("actionable") and name in original]
+        return self.constraints.get_counterfactual_features(original)
 
     def _decision_bounds(self, original: Mapping[str, Any], features: list[str]):
         lower, upper = [], []
@@ -240,7 +245,7 @@ class CCMOCF:
         prediction = int(probability >= 0.5)
         if prediction != int(desired_class):
             return None
-        changed = [name for name in original if original.get(name) != projected.get(name)]
+        changed = self.constraints.changed_features(original, projected)
         numeric_deltas = [abs(float(projected[name]) - float(original[name])) for name in changed if _numeric(original.get(name)) and _numeric(projected.get(name))]
         dependency_penalty = 0.0
         if self.use_dependency_consistency:
@@ -263,7 +268,7 @@ class CCMOCF:
         return Candidate(projected, probability, objectives, changed, "VALID", "VALID_FEASIBLE")
 
     def _population(self, original: dict[str, Any], rng: random.Random) -> list[dict[str, Any]]:
-        actionable = [name for name, spec in self.constraints.config.items() if spec.get("actionable") and name in original]
+        actionable = self.constraints.get_counterfactual_features(original)
         population = [dict(original)]
         for _ in range(self.population_size - 1):
             row = dict(original)
@@ -295,6 +300,42 @@ class CCMOCF:
         LOGGER.info("Optimizer: NSGA-II | Population size: %s | Generations: %s | Number of objectives: %s", self.population_size, self.generations, problem.n_obj)
         result = minimize(problem, algorithm, termination=("n_gen", self.generations), seed=self.seed, verbose=False)
         solutions = [] if result.X is None else np.atleast_2d(result.X)
+        # Preserve the final NSGA-II population for patient-facing audit tables.
+        # ``result.X`` is the non-dominated result only; ``result.pop`` retains
+        # the final evaluated population, including non-flips and infeasible rows.
+        population_values = []
+        if getattr(result, "pop", None) is not None:
+            population_values = np.atleast_2d(result.pop.get("X"))
+        model_flip_candidates = []
+        audit_records = []
+        if population_values.size:
+            raw_rows = [problem.candidate_row(values) for values in population_values]
+            raw_probabilities = _probability(self.model, self._model_input(raw_rows))
+            for candidate_id, (raw_row, probability) in enumerate(zip(raw_rows, raw_probabilities), 1):
+                prediction = int(float(probability) >= 0.5)
+                audit = self.constraints.audit_candidate(original, raw_row)
+                audit_records.append({
+                    "candidate_id": candidate_id,
+                    "probability": float(probability),
+                    "predicted_class": prediction,
+                    "target_class": int(desired_class),
+                    "prediction_flip": prediction == int(desired_class) and prediction != problem.original_prediction,
+                    "changed_features": audit["changed_features"],
+                    "constraint_valid": audit["valid"],
+                    "failed_constraints": audit["failures"],
+                    "row": raw_row,
+                })
+                if prediction == desired_class and prediction != problem.original_prediction:
+                    model_flip_candidates.append({
+                        "candidate_id": candidate_id,
+                        "row": raw_row,
+                        "probability": float(probability),
+                        "prediction": prediction,
+                    })
+        evaluated_candidates = []
+        for values in population_values:
+            _, evaluated = problem.evaluate_candidate(values)
+            evaluated_candidates.append(evaluated)
         candidates = []
         for values in solutions:
             _, candidate = problem.evaluate_candidate(values)
@@ -309,7 +350,8 @@ class CCMOCF:
                 break
         original_probability = float(_probability(self.model, self._model_input([original]))[0])
         LOGGER.info("Number of Pareto solutions: %s | Number of feasible solutions: %s | Prediction evaluation: PASS | Constraint validation: PASS", len(solutions), len(unique))
-        return {"status": "SUCCESS" if unique else "NO_PREDICTION_FLIP", "constraint_status": "VALID_FEASIBLE" if unique else "NO_VALID_CANDIDATE", "optimizer_used": "NSGA-II", "original_prediction": int(original_probability >= 0.5), "original_probability": original_probability, "counterfactuals": unique, "candidates_evaluated": int(len(solutions)), "pareto_solution_count": int(len(solutions)), "runtime": time.perf_counter() - started}
+        status = "SUCCESS" if unique else "CONSTRAINT_INFEASIBLE" if model_flip_candidates else "NO_PREDICTION_FLIP"
+        return {"status": status, "constraint_status": "VALID_FEASIBLE" if unique else "NO_VALID_CANDIDATE", "optimizer_used": "NSGA-II", "original_prediction": int(original_probability >= 0.5), "original_probability": original_probability, "counterfactuals": unique, "evaluated_candidates": evaluated_candidates, "model_flip_candidates": model_flip_candidates, "candidate_audit": audit_records, "candidates_evaluated": int(len(evaluated_candidates)), "pareto_solution_count": int(len(solutions)), "runtime": time.perf_counter() - started}
 
     def _generate_fallback(self, original, desired_class, started, original_prediction, original_probability):
         optimizer = "fallback"
@@ -318,9 +360,37 @@ class CCMOCF:
         try:
             rows = self._population(original, rng)
             feasible: list[Candidate] = []
+            evaluated_candidates: list[Candidate] = []
+            model_flip_candidates = []
+            audit_records = []
             for _ in range(self.generations):
                 for row in rows:
                     candidates_evaluated += 1
+                    # Record every projected candidate, not just a successful flip.
+                    try:
+                        probability = float(_probability(self.model, self._model_input([row]))[0])
+                        prediction = int(probability >= 0.5)
+                        audit = self.constraints.audit_candidate(original, row)
+                        audit_records.append({
+                            "candidate_id": candidates_evaluated,
+                            "probability": probability,
+                            "predicted_class": prediction,
+                            "target_class": int(desired_class),
+                            "prediction_flip": prediction == int(desired_class) and prediction != original_prediction,
+                            "changed_features": audit["changed_features"],
+                            "constraint_valid": audit["valid"],
+                            "failed_constraints": audit["failures"],
+                            "row": dict(row),
+                        })
+                        if prediction == desired_class and prediction != original_prediction:
+                            model_flip_candidates.append({"candidate_id": candidates_evaluated, "row": dict(row), "probability": probability, "prediction": prediction})
+                        changed = [name for name in original if original.get(name) != row.get(name)]
+                        objectives, audited = _CCMOCFProblem(self, original, desired_class).evaluate_candidate(
+                            [row[name] for name in self._actionable_features(original)]
+                        )
+                        evaluated_candidates.append(audited)
+                    except Exception:
+                        pass
                     candidate = self._evaluate(original, row, desired_class)
                     if candidate and candidate.changed_features and int(candidate.probability >= 0.5) != original_prediction:
                         feasible.append(candidate)
@@ -350,6 +420,9 @@ class CCMOCF:
                 "original_prediction": original_prediction,
                 "original_probability": original_probability,
                 "counterfactuals": unique,
+                "evaluated_candidates": evaluated_candidates,
+                "model_flip_candidates": model_flip_candidates,
+                "candidate_audit": audit_records,
                 "candidates_evaluated": candidates_evaluated,
                 "runtime": time.perf_counter() - started,
             }
